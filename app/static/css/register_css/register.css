@@ -1,0 +1,25 @@
+html,body{
+    background: #FFF;
+}
+#header_wrap{
+    height: 68px;
+}
+.content{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    height: 68px;
+    background: #FFF;
+    border-bottom: 1px solid #919191;
+}
+.logo{
+    float: left;
+}
+.logo a{
+    display: block;
+    width: 187px;
+    height: 48px;
+    background: url(../images/logo_new.jpg) no-repeat;
+    text-indent: -9999px;
+}
