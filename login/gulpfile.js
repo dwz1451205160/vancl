@@ -7,7 +7,7 @@ var babel = require('gulp-babel');
 var rename = require("gulp-rename");
 var connect = require('gulp-connect');
 var clean = require('gulp-clean');
-gulp.task('default', ['minihtml','watch','connect']);
+gulp.task('default', ['minihtml', 'watch', 'connect']);
 gulp.task('minijs', function () {
     gulp.src('app/**/*.js')
         .pipe(uglify())                 // 直接压缩hello.js
@@ -33,8 +33,9 @@ gulp.task('concathtml', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('watch',function(){
-    gulp.watch("app/**/*.html",['minihtml'])
+gulp.task('watch', function () {
+    gulp.watch("app/**/*.html", ['minihtml'])
+    gulp.watch("app/**/*.js", ['minijs'])
 })
 
 // 开启服务器
