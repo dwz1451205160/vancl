@@ -7,34 +7,46 @@ var babel = require('gulp-babel');
 var rename = require("gulp-rename");
 var connect = require('gulp-connect');
 var clean = require('gulp-clean');
-gulp.task('default', ['minihtml', 'watch', 'connect']);
+var rev = require('gulp-rev');
+var del = require('del');
+var runSequence = require('run-sequence');
+
+gulp.task('default', ['minijs', 'minihtml', 'watch', 'connect']);
+
 gulp.task('minijs', function () {
     gulp.src('app/**/*.js')
-        .pipe(uglify())                 // 直接压缩hello.js
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(uglify())
+        .pipe(rev())
         .pipe(gulp.dest('dist'))
+        .pipe(rev.manifest())
+        .pipe(gulp.dest('rev/js'))
         .pipe(connect.reload());
 });
 
 gulp.task('concatjs', function () {
     gulp.src(['app/static/js/a.js', 'app/static/js/b.js', 'app/static/js/c.js'])
-        .pipe(concat('all.js'))         // 按照[]里的顺序合并文件
-        .pipe(gulp.dest('dist'));
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest('dist'))
 });
 
 gulp.task('minihtml', function () {
     gulp.src(['server/a.html'])
+        .pipe(htmlmin())
         .pipe(gulp.dest('dist'))
         .pipe(connect.reload());
 });
 
 gulp.task('concathtml', function () {
     gulp.src(['app/b.html', 'server/a.html'])
-        .pipe(concat('all.html'))         // 按照[]里的顺序合并文件
+        .pipe(concat('all.html'))         
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function () {
-    gulp.watch("app/**/*.html", ['minihtml'])
+    gulp.watch("server/**/*.html", ['minihtml'])
     gulp.watch("app/**/*.js", ['minijs'])
 })
 
@@ -42,7 +54,11 @@ gulp.task('watch', function () {
 gulp.task('connect', function () {
     connect.server({
         root: 'dist',
-        port: '7777',
+        port: '9999',
         livereload: true
     });
 });
+
+gulp.task("clean", () => {
+    del(['dist'])
+})

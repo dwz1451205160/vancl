@@ -14,5 +14,4 @@ function e(){
     console.log("eeeeeeeee")
 }
 class people{
-    name="xiaoming"
 }
