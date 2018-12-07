@@ -12,6 +12,7 @@ gulp.task('minijs', function () {
     gulp.src('app/**/*.js')
         .pipe(uglify())                 // 直接压缩hello.js
         .pipe(gulp.dest('dist'))
+        .pipe(connect.reload());
 });
 
 gulp.task('concatjs', function () {
@@ -22,7 +23,8 @@ gulp.task('concatjs', function () {
 
 gulp.task('minihtml', function () {
     gulp.src(['server/a.html'])
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist'))
+        .pipe(connect.reload());
 });
 
 gulp.task('concathtml', function () {
