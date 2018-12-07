@@ -1,3 +1,4 @@
+// 引入插件
 var gulp = require('gulp');
 var uglify = require("gulp-uglify");
 var uglifycss = require('gulp-uglifycss');
@@ -11,8 +12,10 @@ var rev = require('gulp-rev');
 var del = require('del');
 var runSequence = require('run-sequence');
 
-gulp.task('default', ['minijs', 'minihtml', 'watch', 'connect']);
+// 默认任务大合集
+gulp.task('default', ['minihtml', 'watch', 'connect']);
 
+// 压缩JS并生成新文件
 gulp.task('minijs', function () {
     gulp.src('app/**/*.js')
         .pipe(babel({
@@ -26,28 +29,34 @@ gulp.task('minijs', function () {
         .pipe(connect.reload());
 });
 
+// 合并JS
 gulp.task('concatjs', function () {
     gulp.src(['app/static/js/a.js', 'app/static/js/b.js', 'app/static/js/c.js'])
         .pipe(concat('all.js'))
         .pipe(gulp.dest('dist'))
 });
 
+// 压缩html
 gulp.task('minihtml', function () {
-    gulp.src(['server/a.html'])
+    gulp.src(['login.html'])
         .pipe(htmlmin())
         .pipe(gulp.dest('dist'))
         .pipe(connect.reload());
 });
 
+// 合并html
 gulp.task('concathtml', function () {
     gulp.src(['app/b.html', 'server/a.html'])
         .pipe(concat('all.html'))         
         .pipe(gulp.dest('dist'));
 });
 
+// 监听同步
 gulp.task('watch', function () {
-    gulp.watch("server/**/*.html", ['minihtml'])
-    gulp.watch("app/**/*.js", ['minijs'])
+    // gulp.watch("server/**/*.html", ['minihtml']);
+    // gulp.watch("app/**/*.js", ['minijs']);
+    gulp.watch("login.html", ['minihtml']);
+
 })
 
 // 开启服务器
@@ -59,6 +68,7 @@ gulp.task('connect', function () {
     });
 });
 
+// 删除某个（dist）文件
 gulp.task("clean", () => {
     del(['dist'])
 })
