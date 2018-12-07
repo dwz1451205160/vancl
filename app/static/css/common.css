@@ -1,0 +1,27 @@
+.content{
+	width: 1200px;
+	margin: 0 auto;
+}
+#header_wrapper{
+    height: 32px;
+    background: #f7f7f7;
+    border:1px solid #cccccc;
+}
+.header{
+    height: 32px;
+}
+.header p{
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 790px;
+}
+.header a{
+    height: 32px;
+    line-height: 32px;
+    display:block;
+    float: left;
+}
+.header a img{
+    margin-top: 7px; 
+}
