@@ -31,35 +31,52 @@
                         </ul>
                     </div>
                     <div class="login-inp">
+                        <!-- 快速登录 -->
+                        <div class="kuaisu-one">
+                            <input type="text" name="phone" id="phone" placeholder="请输入手机号">
+                            <a id="duanxin" href="">获取短信验证码</a>
+                        </div>
+                        <div class="kuaisu-two">
+                                <input type="text" name="YZM1" id="YZM1" placeholder="验证码">
+                                <img id="YZM2" src="" alt="">
+                                <a class="look" href="">看不清？换一张</a>
+                        </div>
+                        <div class="kuaisu-three">
+                                <input type="text" name="phone-yzm" id="phone-yzm" placeholder="请输入手机验证码">
+                        </div>
+                        <!-- 普通登录 -->
+                        <form action="php/login.php" method="POST">
                             <div class="loginError"></div>
                             <div class="uname">
-                                <input type="text" id="vanclUname" name="vanclUname" placeholder="请输入用户名">
+                                <input type="text" name="username"  id="vanclUname" placeholder="请输入用户名">
                             </div>
                             <div class="loginusernameError"></div>
                             <div class="pword">
-                                <input type="password" name="vanclPword" id="vanclPword" placeholder="请输入密码">
+                                <input type="password" name="password" id="vanclPword" placeholder="请输入密码">
                             </div>
                             <div class="loginppasswordError"></div>
                             <a href="https://login.vancl.com/login/GetPwdStep1.aspx" class="findPword">找回密码</a>
-                            <div class="denglu"><a href="" id="loginvancl">登&ensp;&ensp;&ensp;录</a></div>
+                            <div class="denglu"><button id="loginvancl" type="submit">登&ensp;录</button></div>
+                        </form>
                     </div>
                     <div class="main-buttom">
-                            <p>使用合作网站账号登录凡客</p>
-                            <div class="hezuo">
-                                <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxd896d883988e6d74&redirect_uri=http%3a%2f%2flogin.vancl.com%2flogin%2fwxlogincallback.aspx%3freturnPage%3dhttp%253A%252F%252Fwww.vancl.com%252F&response_type=code&scope=snsapi_login&state=STATE#wechat_redirect"></a>
-                                <a href="https://auth.alipay.com/login/express.htm?goto=https%3A%2F%2Fmemberexprod.alipay.com%3A443%2Fauthorize%2FuserAuthQuickLoginAction.htm%3Fe_i_i_d%3D01fbad0d6dde81251554d8fa6b0dd264"></a>
-                                <a href="https://api.weibo.com/oauth2/authorize?client_id=4068188147&response_type=code&redirect_uri=https%3a%2f%2fapi-login.vancl.com%2foauth2%2fsinaweibo&state=https%3a%2f%2flogin.vancl.com%2flogin%2fReceiveCallback.aspx&scope="></a>
-                                <a href="https://account.xiaomi.com/pass/serviceLogin?callback=https%3A%2F%2Faccount.xiaomi.com%2Fsts%2Foauth%3Fsign%3DR8ZuYuBOLk40%252BsNaiSqntIXI3%252B0%253D%26followup%3Dhttps%253A%252F%252Faccount.xiaomi.com%252Foauth2%252Fauthorize%253Fclient_id%253D2882303761517150121%2526response_type%253Dcode%2526redirect_uri%253Dhttps%25253A%25252F%25252Fapi-login.vancl.com%25252Foauth2%25252Fxiaomi%2526state%253Dhttps%25253A%25252F%25252Flogin.vancl.com%25252Flogin%25252FReceiveCallback.aspx%2526scope%253D%26sid%3Doauth2.0&sid=oauth2.0&lsrp_appName=%E4%BD%BF%E7%94%A8%E5%B0%8F%E7%B1%B3%E5%B8%90%E5%8F%B7%E7%99%BB%E5%BD%95%24%7B%E5%87%A1%E5%AE%A2%E8%AF%9A%E5%93%81%7D%24&_customDisplay=20&scope=1%202&_locale=zh_CN&_ssign=2%26V1_oauth2.0%26ZryYTY81xYi%2BJPxJm1nBAKkUQe8%3D"></a>
-                                <a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&client_id=100273027&response_type=code&redirect_uri=https%3a%2f%2fapi-login.vancl.com%2foauth2%2fqq&state=https%3a%2f%2flogin.vancl.com%2flogin%2fReceiveCallback.aspx&scope=get_info"></a>
-                                <a href="https://openapi.360.cn/oauth2/authorize?client_id=599691f539be7a730dad8be7be32e437&response_type=code&redirect_uri=https%3a%2f%2fapi-login.vancl.com%2foauth2%2fqihoo360&state=https%3a%2f%2flogin.vancl.com%2flogin%2fReceiveCallback.aspx&scope="></a>
-                            </div>
+                        <p>使用合作网站账号登录凡客</p>
+                        <div class="hezuo">
+                            <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxd896d883988e6d74&redirect_uri=http%3a%2f%2flogin.vancl.com%2flogin%2fwxlogincallback.aspx%3freturnPage%3dhttp%253A%252F%252Fwww.vancl.com%252F&response_type=code&scope=snsapi_login&state=STATE#wechat_redirect"></a>
+                            <a href="https://auth.alipay.com/login/express.htm?goto=https%3A%2F%2Fmemberexprod.alipay.com%3A443%2Fauthorize%2FuserAuthQuickLoginAction.htm%3Fe_i_i_d%3D01fbad0d6dde81251554d8fa6b0dd264"></a>
+                            <a href="https://api.weibo.com/oauth2/authorize?client_id=4068188147&response_type=code&redirect_uri=https%3a%2f%2fapi-login.vancl.com%2foauth2%2fsinaweibo&state=https%3a%2f%2flogin.vancl.com%2flogin%2fReceiveCallback.aspx&scope="></a>
+                            <a href="https://account.xiaomi.com/pass/serviceLogin?callback=https%3A%2F%2Faccount.xiaomi.com%2Fsts%2Foauth%3Fsign%3DR8ZuYuBOLk40%252BsNaiSqntIXI3%252B0%253D%26followup%3Dhttps%253A%252F%252Faccount.xiaomi.com%252Foauth2%252Fauthorize%253Fclient_id%253D2882303761517150121%2526response_type%253Dcode%2526redirect_uri%253Dhttps%25253A%25252F%25252Fapi-login.vancl.com%25252Foauth2%25252Fxiaomi%2526state%253Dhttps%25253A%25252F%25252Flogin.vancl.com%25252Flogin%25252FReceiveCallback.aspx%2526scope%253D%26sid%3Doauth2.0&sid=oauth2.0&lsrp_appName=%E4%BD%BF%E7%94%A8%E5%B0%8F%E7%B1%B3%E5%B8%90%E5%8F%B7%E7%99%BB%E5%BD%95%24%7B%E5%87%A1%E5%AE%A2%E8%AF%9A%E5%93%81%7D%24&_customDisplay=20&scope=1%202&_locale=zh_CN&_ssign=2%26V1_oauth2.0%26ZryYTY81xYi%2BJPxJm1nBAKkUQe8%3D"></a>
+                            <a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&client_id=100273027&response_type=code&redirect_uri=https%3a%2f%2fapi-login.vancl.com%2foauth2%2fqq&state=https%3a%2f%2flogin.vancl.com%2flogin%2fReceiveCallback.aspx&scope=get_info"></a>
+                            <a href="https://openapi.360.cn/oauth2/authorize?client_id=599691f539be7a730dad8be7be32e437&response_type=code&redirect_uri=https%3a%2f%2fapi-login.vancl.com%2foauth2%2fqihoo360&state=https%3a%2f%2flogin.vancl.com%2flogin%2fReceiveCallback.aspx&scope="></a>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
         <hr style="margin-top:20px;">
         <div id="footer">
-            <div class="footerP">Copyright 2007 - 2016 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11010102000579号 出版物经营许可证新出发京批字第直110138号</div>
+            <div class="footerP">Copyright 2007 - 2016 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11010102000579号
+                出版物经营许可证新出发京批字第直110138号</div>
             <div class="footer-hezuo">
                 <a href="https://credit.cecdc.com/CX20111229001302001330.html"></a>
                 <a href=""></a>
@@ -71,7 +88,7 @@
     <script src="jquery/dist/jquery.js"></script>
     <script src="js/login.js"></script>
     <script>
-        
+
     </script>
 </body>
 
