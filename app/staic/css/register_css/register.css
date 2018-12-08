@@ -129,6 +129,9 @@ html,body{
     background: #9a9a9a;
     margin-top: 16px;
 }
+.menu .sub:hover{
+    text-decoration: underline;
+}
 /* 尾部 */
 .footer{
     height: 119px;
