@@ -163,6 +163,42 @@ h1 {
     margin: 15px 20px;
 }
 /* 普通登录 */
+.userError{
+    display: none;
+    position: absolute;
+    color: #b42025;
+    font-size: 12px;
+    right: 350px;
+    width: 200px;
+    height: 18px;
+    background: rgb(247, 241, 242);
+    border: 1px solid rgb(245, 103, 126);
+}
+#gantanhao1{
+    display: none;
+    position: absolute;
+    top: 272px;
+    right: 525px;
+    color: #b42025;
+}
+#gantanhao2{
+    display: none;
+    position: absolute;
+    top: 341px;
+    right: 525px;
+    color: #b42025;
+}
+.passError{
+    display: none;
+    position: absolute;
+    color: #b42025;
+    font-size: 12px;
+    right: 350px;
+    width: 200px;
+    height: 18px;
+    background: rgb(250, 245, 246);
+    border: 1px solid rgb(245, 103, 126);
+}
 #main #main-right .login-inp #vanclUname{
     font-size: 15px;
     width: 360px;
