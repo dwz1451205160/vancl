@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/dwz1451205160/vancl#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-collector": "^0.1.0",
+    "gulp-rev": "^9.0.0"
+  },
+  "dependencies": {
+    "del": "^3.0.0"
   }
 }
