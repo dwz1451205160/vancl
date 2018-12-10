@@ -1,0 +1,9 @@
+.box{
+    height: 100px;
+    width: 100px;
+    .box{
+        height: 50px;
+        width: 60px;
+        background: yellow;
+    }
+}
