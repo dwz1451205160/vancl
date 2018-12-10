@@ -111,7 +111,7 @@ gulp.task('clean', () => {
 })
 //自动刷新
 gulp.task('all', function() {
-  gulp.src('app/**/*.*')
+  gulp.src(['app/**/*.*', '!app/static/**/*.scss'])
   .pipe(gulp.dest('dist'))
   .pipe(connect.reload())
 
@@ -120,7 +120,7 @@ gulp.task('all', function() {
 gulp.task('sass', function () {
   return gulp.src('app./static/css/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('dist/static/css'));
 });
 //开发环境使用
 gulp.task('dev', function() {
