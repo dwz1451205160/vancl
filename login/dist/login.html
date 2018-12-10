@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>凡客诚品 - 会员登录</title>
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
 </head>
 
 <body>
@@ -36,24 +37,29 @@
                             <input type="text" name="phone" id="phone" placeholder="请输入手机号">
                             <a id="duanxin" href="">获取短信验证码</a>
                         </div>
+                        <div class="phoneError"></div>
                         <div class="kuaisu-two">
                                 <input type="text" name="YZM1" id="YZM1" placeholder="验证码">
                                 <img id="YZM2" src="" alt="">
                                 <a class="look" href="">看不清？换一张</a>
                         </div>
+                        <div class="yzmError"></div>
                         <div class="kuaisu-three">
                                 <input type="text" name="phone-yzm" id="phone-yzm" placeholder="请输入手机验证码">
                         </div>
+                        <div class="phoneyzmError"></div>
                         <!-- 普通登录 -->
-                        <form action="php/login.php" method="POST">
+                        <form id="formInp" action="php/login.php" method="POST">
                             <div class="uname">
                                 <input type="text" name="username" id="vanclUname" placeholder="请输入用户名">
                             </div>
                             <div class="userError"></div>
+                            <i class="iconfont icon-gantanhao" id="gantanhao1"></i>
                             <div class="pword">
                                 <input type="password" name="password" id="vanclPword" placeholder="请输入密码">
                             </div>
                             <div class="passError"></div>
+                            <i class="iconfont icon-gantanhao" id="gantanhao2"></i>
                             <a href="https://login.vancl.com/login/GetPwdStep1.aspx" class="findPword">找回密码</a>
                             <div class="denglu"><button id="loginvancl" type="submit">登&ensp;录</button></div>
                         </form>
