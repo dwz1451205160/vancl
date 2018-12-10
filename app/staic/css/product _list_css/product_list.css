@@ -138,7 +138,7 @@ ul li .newprice strong em{
 }
 /* 优选推荐 */
 #recommend_wrap{
-
+    height: 1173px;
 }
 .recommend{
     height: 50px;
@@ -152,16 +152,111 @@ ul li .newprice strong em{
 .shangzhuang{
     height: 520px;
 }
+.shangzhuang ul{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
 .pic_one{
     height: 510px;
     width: 590px;
-    border: 1px solid #e8e7ec;
 }
 .pic_one a{
     display: block;
     height: 440px;
     width: 590px; 
 }
-.pic_one p{
+.pic_one h3{
     color: #333;
+    font-size: 12px;
+    line-height: 70px;
+    border: 1px solid #e8e7ec;
+    border-top: none;
+    padding-left: 12px;
 }
+.pic_one h3 span{
+    color: #a10000;
+    margin-left: 390px;
+}
+.pic_two{
+
+}
+.pic_two div{
+    width: 290px;
+    height: 248px;
+    margin-bottom: 12px;
+}
+.pic_two div a{
+    display: block;
+    width: 290px;
+    height: 180px;
+}
+.pic_two div h3{
+    color: #333;
+    font-size: 12px;
+    line-height: 70px;
+    border: 1px solid #e8e7ec;
+    border-top: none;
+    padding-left: 12px;
+}
+.pic_two h3 span{
+    color: #a10000;
+    margin-left: 120px;
+}
+.pic_three{
+    height: 510px;
+}
+.pic_three a{
+    display: block;
+    width: 286px;
+    height: 440px;
+}
+.pic_three h3{
+    height: 70px;
+    border: 1px solid #e8e7ec;
+    border-top: none;
+    line-height: 70px;
+    color: #333;
+    padding: 0px 12px;
+}
+.pic_three span{
+    color: #a10000;
+    float: right;
+}
+/* 下装推荐 */
+.recommend_xia h2{
+    width: 1200px;
+    height: 50px;
+    text-align: center;
+    color: #9a9a9a;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 0 0 30px 0;
+}
+.recommend_xia ul{
+    display: flex;
+    justify-content: space-between;
+}
+.recommend_xia a{
+    display: block;
+    width: 285px;
+    height: 438px;
+}
+.recommend_xia h3{
+    box-sizing: border-box;
+    height: 69px;
+    width: 285px;
+    border: 1px solid #e8e7ec;
+    border-top: none;
+    line-height: 70px;
+    padding: 0px 12px;
+}
+.recommend_xia h3 span{
+    color: #a10000;
+    float: right;
+}
+.recommend_xia h3 span em{
+    font-size: 16px;
+    font-weight: bold;
+}
+
