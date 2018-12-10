@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>凡客VANCL-互联网快时尚品牌,服装,鞋,配饰,网上购物货到付款网站,7天无条件退货</title>
+    <link rel="stylesheet" href="css/lunbo.css">
+</head>
+<body>
+    <div class="show">
+        <ul id="box">
+            <li style="z-index: 6" class="act"><img src="image/lunbo1.jpg" alt=""></li>
+            <li style="z-index: 5"><img src="image/lunbo2.jpg" alt=""></li>
+            <li style="z-index: 4"><img src="image/lunbo3.jpg" alt=""></li>
+            <li style="z-index: 3"><img src="image/lunbo4.jpg" alt=""></li>
+            <li style="z-index: 2"><img src="image/lunbo5.jpg" alt=""></li>
+            <li style="z-index: 1"><img src="image/lunbo6.jpg" alt=""></li>
+        </ul>
+        <ol id="box2" style="z-index: 7">
+            <li class="set"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <div class="left-btn"></div>
+        <div class="right-btn"></div>
+    </div>
+    <script src="js/lunbo.js"></script>
+    <script>
+        var swiper = (function () {
+        var $liAll = document.querySelectorAll('#box li');
+        var $tipAll = document.querySelectorAll('#box2 li');
+        var $prevBtn = document.querySelector('.left-btn');
+        var $nextBtn = document.querySelector('.right-btn');
+        var timer = null;
+        var showIndex = 0;
+        return {
+            init() {
+                this.event();
+                this.autoPlay();
+            },
+            event() {
+                var _this = this;
+                $prevBtn.onclick = function () {
+                _this.showImage(--_this.index);
+                _this.autoPlay(_this.index); 
+            }
+            $nextBtn.onclick = function () {
+                _this.showImage(++_this.index);
+                _this.autoPlay(_this.index); 
+            }
+                for (var i = 0; i < $tipAll.length; i++) {
+                    $tipAll[i].index = i;
+                    $tipAll[i].onmouseenter = function () {
+                        _this.showImage(this.index);
+                        _this.autoPlay(this.index);  
+                    }
+                }
+            },
+            showImage(index) {
+                if(index >= $tipAll.length || index < 0) {
+                    index = 0;
+                    showIndex = index;
+                }
+                for (var i = 0; i < $tipAll.length; i++) {
+                    $tipAll[i].removeAttribute('class');
+                    move($liAll[i], {opacity: 0}, 500, function(ele){
+                        ele.removeAttribute('class');
+                    });
+                }
+                $tipAll[index].setAttribute('class', 'set');
+                $liAll[index].setAttribute('class', 'act');
+                move($liAll[index], {opacity: 100}, 500);
+            },
+            autoPlay(index = 0) {
+                showIndex = index;
+                clearInterval(timer);
+                timer = setInterval(_ => {
+                    showIndex++;
+                    this.showImage(showIndex);
+                }, 2000)   
+            }
+        }
+    }())
+    swiper.init();
+    </script>
+</body>
+</html>
