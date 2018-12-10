@@ -13,10 +13,10 @@ var del = require('del');
 var runSequence = require('run-sequence');
 
 // 默认任务大合集
-gulp.task('default', ['minihtml', 'watch', 'connect']);
+gulp.task('default', ['minijs','minicss','minihtml', 'watch', 'connect']);
 
 // 压缩JS并生成新文件
-gulp.task('minijs', function () {
+gulp.task('minijsssss', function () {
     gulp.src('app/**/*.js')
         .pipe(babel({
             presets: ['@babel/env']
@@ -29,19 +29,35 @@ gulp.task('minijs', function () {
         .pipe(connect.reload());
 });
 
-// 合并JS
-gulp.task('concatjs', function () {
-    gulp.src(['app/static/js/a.js', 'app/static/js/b.js', 'app/static/js/c.js'])
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist'))
+// 压缩css
+gulp.task('minicss', function () {
+    gulp.src(['css/login.css'])
+        .pipe(uglifycss())
+        .pipe(gulp.dest('dist/css'))
+        .pipe(connect.reload());
 });
 
-// 压缩html
+// 压缩js
+gulp.task('minijs', function () {
+    gulp.src(['js/*.js'])
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'))
+        .pipe(connect.reload());
+});
+
+// html
 gulp.task('minihtml', function () {
     gulp.src(['login.html'])
         .pipe(htmlmin())
         .pipe(gulp.dest('dist'))
         .pipe(connect.reload());
+});
+
+// 合并JS
+gulp.task('concatjs', function () {
+    gulp.src(['app/static/js/a.js', 'app/static/js/b.js', 'app/static/js/c.js'])
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest('dist'))
 });
 
 // 合并html
@@ -54,9 +70,9 @@ gulp.task('concathtml', function () {
 // 监听同步
 gulp.task('watch', function () {
     // gulp.watch("server/**/*.html", ['minihtml']);
-    // gulp.watch("app/**/*.js", ['minijs']);
+     gulp.watch("js/*.js", ['minijs']);
     gulp.watch("login.html", ['minihtml']);
-
+    gulp.watch("css/login.css", ['minicss']);
 })
 
 // 开启服务器
