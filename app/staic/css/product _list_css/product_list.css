@@ -1,0 +1,336 @@
+html,body{
+    background: #FFF;
+}
+#top_up_wrap{
+    height: 60px;
+}
+.top_up{
+    height: 60px;
+    background: #ef0916
+}
+.content{
+    width: 1200px;
+    margin: 0 auto;
+}
+.top_up a:nth-child(1){
+    display: inline-block;
+    width: 600px;
+    text-align: center;
+    color: #FFF;
+    line-height: 60px;
+    font-size: 26px;
+    font-weight: bold;
+}
+.top_up a:nth-child(2){
+    display: inline-block;
+    width: 224px;
+    height: 39px;
+    text-align: center;
+    color: #ef0916;
+    line-height: 39px;
+    font-size: 22px;
+    background: #FFF;
+    border-radius: 6px;
+    text-align: center;
+    margin: 0 0 0 282px;
+    font-weight: bold;
+}
+#count_time_wrap{
+    height: 64px;
+}
+.count_time a{
+    display: block;
+    width: 1200px;
+    height: 64px;
+    background: url(../../images/list_image/mm.jpg);
+    margin-top: 20px;
+}
+/* 上列表 */
+#list_top_wrap ul{
+    width: 1200px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#list_top_wrap ul li{
+    width: 232px;
+}
+#list_top_wrap ul li a{
+    display: block;
+}
+#list_top_wrap ul li a p{
+    font-size: 16px;
+    color: #474747;
+    margin-top: 8px;
+    line-height: 20px;
+}
+ul li .oldprice{
+    display: block;
+    color: #d3d3d3;
+    text-decoration: line-through;
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+ul li .newprice{
+    display: block;
+}
+ul li .newprice i{
+    color: #BB2B34;
+    font-size: 16px;
+}
+ul li .newprice strong{
+    color:#474747;
+    font-size: 16px;
+    margin-left: 80px;
+}
+ul li .newprice strong em{
+    color: #BB2B34;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* 半价专场 */
+#half_price_wrap{
+    height: 213px;
+    margin-bottom: 32px;
+}
+.half_price a{
+    display: block;
+    height: 213px;
+    width: 1200px;
+    background: url(../../images/list_image/pc2_02.jpg) no-repeat;
+}
+#list_center_wrap ul{
+    overflow: hidden;
+}
+#list_center_wrap ul li{
+    float: left;
+    height: 767px;
+}
+#list_center_wrap ul li a{
+    display: block;
+    width: 600px;
+    height: 732px;
+}
+#clean_wrap{
+    height: 209px;
+    background: #FFF;
+}
+.clean a{
+    display: block;
+    width: 1200px;
+    height: 209px;
+    background: url(../../images/list_image/qczjsy_02.jpg) no-repeat;
+}
+
+#list_bottom_wrap ul{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+#list_bottom_wrap ul li{
+    height: 791px;
+}
+#list_bottom_wrap ul li a{
+    display: block;
+    height: 791px;
+    width: 586px;
+}
+/* 优选推荐 */
+#recommend_wrap{
+    height: 1173px;
+}
+.recommend{
+    height: 50px;
+    width: 100%;
+    color: #9a9a9a;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 30px 0;
+    text-align: center;
+}
+.shangzhuang{
+    height: 520px;
+}
+.shangzhuang ul{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.pic_one{
+    height: 510px;
+    width: 590px;
+}
+.pic_one a{
+    display: block;
+    height: 440px;
+    width: 590px; 
+}
+.pic_one h3{
+    color: #333;
+    font-size: 12px;
+    line-height: 70px;
+    border: 1px solid #e8e7ec;
+    border-top: none;
+    padding-left: 12px;
+}
+.pic_one h3 span{
+    color: #a10000;
+    margin-left: 390px;
+}
+.pic_two{
+
+}
+.pic_two div{
+    width: 290px;
+    height: 248px;
+    margin-bottom: 12px;
+}
+.pic_two div a{
+    display: block;
+    width: 290px;
+    height: 180px;
+}
+.pic_two div h3{
+    color: #333;
+    font-size: 12px;
+    line-height: 70px;
+    border: 1px solid #e8e7ec;
+    border-top: none;
+    padding-left: 12px;
+}
+.pic_two h3 span{
+    color: #a10000;
+    margin-left: 120px;
+}
+.pic_three{
+    height: 510px;
+}
+.pic_three a{
+    display: block;
+    width: 286px;
+    height: 440px;
+}
+.pic_three h3{
+    height: 70px;
+    border: 1px solid #e8e7ec;
+    border-top: none;
+    line-height: 70px;
+    color: #333;
+    padding: 0px 12px;
+}
+.pic_three span{
+    color: #a10000;
+    float: right;
+}
+/* 下装推荐 */
+.recommend_xia h2{
+    width: 1200px;
+    height: 50px;
+    text-align: center;
+    color: #9a9a9a;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 0 0 30px 0;
+}
+.recommend_xia ul{
+    display: flex;
+    justify-content: space-between;
+}
+.recommend_xia a{
+    display: block;
+    width: 285px;
+    height: 438px;
+}
+.recommend_xia h3{
+    box-sizing: border-box;
+    height: 69px;
+    width: 285px;
+    border: 1px solid #e8e7ec;
+    border-top: none;
+    line-height: 70px;
+    padding: 0px 12px;
+}
+.recommend_xia h3 span{
+    color: #a10000;
+    float: right;
+}
+.recommend_xia h3 span em{
+    font-size: 16px;
+    font-weight: bold;
+}
+/* 更多精品 */
+.boutique h2{
+    width: 1200px;
+    height: 50px;
+    text-align: center;
+    color: #9a9a9a;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 50px 0 0 0;
+}
+.boutique ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+.boutique ul li{
+    margin-top: 30px;
+}
+.boutique ul li a{
+    display: block;
+    width: 385;
+    height: 275px;
+}
+/* 服务 */
+#service_wrap{
+    height: 282px;
+    margin: 32px 0 25px 0;
+}
+.service{
+    height: 282px;
+    border: 1px solid #e0e0e1;
+    box-sizing: border-box;
+    padding: 31px 41px;
+} 
+.service_one li{
+    width: 370px;
+    height: 138px;
+    float: left;
+    text-align: center;
+    margin: 12px 0 0 0;
+}
+.service_one li:nth-child(2){
+    border-left: 1px solid #e0e0e1;
+    border-right: 1px solid #e0e0e1;
+}
+.service_one li a{
+    display: block;
+    width: 370px;
+    height: 138px;
+}
+.service_one li .onlinetime{
+    width: 156px;
+    height: 32px;
+    line-height: 32px;
+    color: #FFF;
+    background: #b81c22;
+    margin: 30px auto;
+}
+.service_one li .seven{
+    color: #727171;
+    font-size: 14px;
+    line-height: 26px;
+    margin-top: 24px;
+}
+.service_one li:nth-child(3) a img{
+    width: 98px;
+    height: 98px;
+    margin-bottom: 8px;
+}
+.service_one li:nth-child(3) p{
+    color: #727171;
+}
+.service_one li:nth-child(3) p em{
+    color: #b50000;
+}

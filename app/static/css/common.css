@@ -1,20 +1,23 @@
+#header_wrapper{
+    height: 32px;
+    background: #f7f7f7;
+    border-bottom:1px solid #cccccc;
+}
 .content{
 	width: 1200px;
 	margin: 0 auto;
 }
-#header_wrapper{
-    height: 32px;
-    background: #f7f7f7;
-    border:1px solid #cccccc;
-}
+
 .header{
     height: 32px;
+    background: #f7f7f7;
 }
-.header p{
+.header>p{
     float: left;
     height: 32px;
     line-height: 32px;
-    margin-left: 790px;
+    margin-left: 788px;
+    color: #808080;
 }
 .header a{
     height: 32px;
@@ -22,6 +25,50 @@
     display:block;
     float: left;
 }
+.header span{
+    display: block;
+    float: left;
+    color: #808080;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 6px 0 8px;
+}
 .header a img{
     margin-top: 7px; 
+}
+.header a:nth-of-type(1){
+    margin-left: 2px;
+}
+.header a:nth-of-type(3){
+    margin: 0 16px 0 14px;
+}
+.header a:nth-of-type(3):hover{
+    color: #b71c20;
+}
+.header a:nth-of-type(4){
+    margin-right: 13px;
+}
+.header a:nth-of-type(4):hover{
+    color: #b71c20;
+}
+.header a:nth-of-type(4) img{
+    margin-right: 9px;
+}
+.header a:nth-of-type(5){
+    margin-right: 2px;
+}
+.header a:nth-of-type(5) span{  
+    position: absolute;
+    width: 148px;
+    height: 169px;
+    right: 96px;
+    top: 30px;
+    border: 1px solid #e5e5e5;
+    background: url(../image/common_img/weixin.png) no-repeat;
+    overflow: hidden;
+    display: none;
+    z-index: 10000;
+}
+.header a:nth-of-type(5):hover span{
+    display: inline;
 }
