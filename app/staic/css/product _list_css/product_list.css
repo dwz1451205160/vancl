@@ -99,11 +99,40 @@ ul li .newprice strong em{
     width: 1200px;
     background: url(../../images/list_image/pc2_02.jpg) no-repeat;
 }
+#list_center_wrap ul{
+    overflow: hidden;
+}
 #list_center_wrap ul li{
     float: left;
+    height: 767px;
 }
 #list_center_wrap ul li a{
     display: block;
     width: 600px;
     height: 732px;
+}
+#clean_wrap{
+    height: 209px;
+    background: #FFF;
+}
+.clean a{
+    display: block;
+    width: 1200px;
+    height: 209px;
+    background: url(../../images/list_image/qczjsy_02.jpg) no-repeat;
+}
+
+#list_bottom_wrap ul{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+#list_bottom_wrap ul li{
+    height: 791px;
+}
+#list_bottom_wrap ul li a{
+    display: block;
+    height: 791px;
+    width: 586px;
 }
