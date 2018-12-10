@@ -1,0 +1,109 @@
+html,body{
+    background: #FFF;
+}
+#top_up_wrap{
+    height: 60px;
+}
+.top_up{
+    height: 60px;
+    background: #ef0916
+}
+.content{
+    width: 1200px;
+    margin: 0 auto;
+}
+.top_up a:nth-child(1){
+    display: inline-block;
+    width: 600px;
+    text-align: center;
+    color: #FFF;
+    line-height: 60px;
+    font-size: 26px;
+    font-weight: bold;
+}
+.top_up a:nth-child(2){
+    display: inline-block;
+    width: 224px;
+    height: 39px;
+    text-align: center;
+    color: #ef0916;
+    line-height: 39px;
+    font-size: 22px;
+    background: #FFF;
+    border-radius: 6px;
+    text-align: center;
+    margin: 0 0 0 282px;
+    font-weight: bold;
+}
+#count_time_wrap{
+    height: 64px;
+}
+.count_time a{
+    display: block;
+    width: 1200px;
+    height: 64px;
+    background: url(../../images/list_image/mm.jpg);
+    margin-top: 20px;
+}
+/* 上列表 */
+#list_top_wrap ul{
+    width: 1200px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#list_top_wrap ul li{
+    width: 232px;
+}
+#list_top_wrap ul li a{
+    display: block;
+}
+#list_top_wrap ul li a p{
+    font-size: 16px;
+    color: #474747;
+    margin-top: 8px;
+    line-height: 20px;
+}
+ul li .oldprice{
+    display: block;
+    color: #d3d3d3;
+    text-decoration: line-through;
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+ul li .newprice{
+    display: block;
+}
+ul li .newprice i{
+    color: #BB2B34;
+    font-size: 16px;
+}
+ul li .newprice strong{
+    color:#474747;
+    font-size: 16px;
+    margin-left: 80px;
+}
+ul li .newprice strong em{
+    color: #BB2B34;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* 半价专场 */
+#half_price_wrap{
+    height: 213px;
+    margin-bottom: 32px;
+}
+.half_price a{
+    display: block;
+    height: 213px;
+    width: 1200px;
+    background: url(../../images/list_image/pc2_02.jpg) no-repeat;
+}
+#list_center_wrap ul li{
+    float: left;
+}
+#list_center_wrap ul li a{
+    display: block;
+    width: 600px;
+    height: 732px;
+}
