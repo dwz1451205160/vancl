@@ -90,9 +90,6 @@ var sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 var runSequence = require('run-sequence');//解决同步异步问题
 
-// gulp.task('default', ['minijs', 'minihtml', 'watch', 'connect']);
-
-
 //监听
 gulp.task('watch', function() {
   gulp.watch('app/**/*.*', ['all','sass'])
