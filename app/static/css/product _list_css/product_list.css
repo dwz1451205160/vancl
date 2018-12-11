@@ -42,7 +42,7 @@ html,body{
     display: block;
     width: 1200px;
     height: 64px;
-    background: url(../../images/list_image/mm.jpg);
+    background: url(../../image/list_image/mm.jpg);
     margin-top: 20px;
 }
 /* 上列表 */
@@ -97,7 +97,7 @@ ul li .newprice strong em{
     display: block;
     height: 213px;
     width: 1200px;
-    background: url(../../images/list_image/pc2_02.jpg) no-repeat;
+    background: url(../../image/list_image/pc2_02.jpg) no-repeat;
 }
 #list_center_wrap ul{
     overflow: hidden;
@@ -119,7 +119,7 @@ ul li .newprice strong em{
     display: block;
     width: 1200px;
     height: 209px;
-    background: url(../../images/list_image/qczjsy_02.jpg) no-repeat;
+    background: url(../../image/list_image/qczjsy_02.jpg) no-repeat;
 }
 
 #list_bottom_wrap ul{
@@ -390,7 +390,7 @@ ul li .newprice strong em{
 }
 .footer_top ul li i{
     display: block;
-    background: url(../../images/list_image/jlt.png) no-repeat;
+    background: url(../../image/list_image/jlt.png) no-repeat;
 }
 .footer_top .icon88{
     width: 112px;

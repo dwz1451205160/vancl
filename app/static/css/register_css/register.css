@@ -21,7 +21,7 @@ html,body{
     display: block;
     width: 187px;
     height: 48px;
-    background: url(../../images/register_image/logo_new.jpg) no-repeat;
+    background: url(../../image/register_image/logo_new.jpg) no-repeat;
     text-indent: -9999px;
 }
 /* 主体内容 */
@@ -39,7 +39,7 @@ html,body{
     display: block;
     width: 413px;
     height: 293px;
-    background: url(../../images/register_image/images01.jpg) no-repeat;
+    background: url(../../image/register_image/images01.jpg) no-repeat;
     margin: 110px 0 0 156px;
 }
 .main_left{
@@ -96,7 +96,7 @@ html,body{
     line-height: 43px;
     text-align: center;
     border: 1px solid #acacac;
-    background: url(../../images/register_image/image02.jpg) no-repeat;
+    background: url(../../image/register_image/image02.jpg) no-repeat;
 }
 .menu .code1{
     display: block;
@@ -163,28 +163,28 @@ ul li a .icon1{
     display: block;
     width: 112px;
     height: 42px;
-    background: url(../../images/register_image/images02.png) no-repeat;
+    background: url(../../image/register_image/images02.png) no-repeat;
     background-position: 0px -400px;
 }
 ul li a .icon2{
     display: block;
     width: 156px;
     height: 45px;
-    background: url(../../images/register_image/images02.png) no-repeat;
+    background: url(../../image/register_image/images02.png) no-repeat;
     background-position: 0px -448px;
 }
 ul li a .icon3{
     display: block;
     width: 96px;
     height: 42px;
-    background: url(../../images/register_image/images02.png) no-repeat;
+    background: url(../../image/register_image/images02.png) no-repeat;
     background-position: 0px -494px;
 }
 ul li a .icon4{
     display: block;
     width: 101px;
     height: 42px;
-    background: url(../../images/register_image/images02.png) no-repeat;
+    background: url(../../image/register_image/images02.png) no-repeat;
     background-position: -97px -494px;
 }
 
