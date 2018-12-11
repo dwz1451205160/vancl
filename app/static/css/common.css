@@ -95,18 +95,21 @@
     margin-top: 28px;
     justify-content: space-between;
 }
-.search_top form{
+.search_top .search_box{
     display: flex;
 }
-.search_top form input:nth-child(1){
+.search_box .search_input{
     height: 26px;
     width: 256px;
     padding-left: 4px;
 }
-.search_top form input:nth-child(1)::-webkit-input-placeholder{
+.search_box .search_input::-webkit-input-placeholder{
     color: #000000;
 }
-.search_top form input:nth-child(2){
+.search_box .search_result{
+    display: none;
+}
+.search_box .search_ss{
     width: 47px;
     height: 29px;    
     background: #b81b22;
@@ -197,7 +200,7 @@
 }
 .footer_top ul li i{
     display: block;
-    background: url(../image/common_img/jlt.png) no-repeat;
+    background: url(../image/common_img/jingling.png) no-repeat;
 }
 .footer_top .icon88{
     width: 112px;
