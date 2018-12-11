@@ -317,12 +317,13 @@ ul li .newprice strong em{
     height: 32px;
     line-height: 32px;
     color: #FFF;
+    font-size: 14px;
     background: #b81c22;
     margin: 30px auto;
 }
 .service_one li .seven{
     color: #727171;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 26px;
     margin-top: 24px;
 }
@@ -332,6 +333,7 @@ ul li .newprice strong em{
     margin-bottom: 8px;
 }
 .service_one li:nth-child(3) p{
+    font-size: 14px;
     color: #727171;
 }
 .service_one li:nth-child(3) p em{
@@ -348,7 +350,7 @@ ul li .newprice strong em{
 .service ol li{
     height: 26px;
     line-height: 26px;
-    padding: 0 65px;
+    padding: 0 60px;
     border-right: 1px solid #dadadb;
 }
 .service ol li:last-child{
@@ -356,7 +358,62 @@ ul li .newprice strong em{
 }
 .service ol li a{
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     color: #000;
     text-align: center;
+}
+/* 尾部 */
+#footer_wrap{
+    /* height: 136px; */
+    border-top: 1px solid #000;
+}
+.footer_top p{
+    text-align: center;
+    color: #3E3A39;
+    font-size: 12px;
+    line-height: 24px;
+    margin-top: 12px;
+}
+.footer_top ul{
+    width: 980px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+.footer_top ul li{
+    margin: 0 12px;
+}
+.footer_top ul li:last-child img{
+    width: 122px;
+    height: 45px;
+}
+.footer_top ul li i{
+    display: block;
+    background: url(../../images/list_image/jlt.png) no-repeat;
+}
+.footer_top .icon88{
+    width: 112px;
+    height: 45px;
+    background-position: 0 -581px;
+}
+.footer_top .icon77{
+    width: 156px;
+    height: 45px;
+    background-position: 0 -629px;
+}
+.footer_top .icon66{
+    width: 96px;
+    height: 45px;
+    background-position: 0 -675px;
+}
+.footer_top .icon55{
+    width: 101px;
+    height: 45px;
+    background-position: -97px -675px;
+}
+.footer_top .icon44{
+    width: 45px;
+    height: 45px;
+    background-position: -202px -675px;
 }

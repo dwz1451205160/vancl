@@ -145,7 +145,7 @@ html,body{
 ul{
     display: flex;
     justify-content: center;
-    width: 1200px
+    width: 1200px;
 }
 ul li a i{
     margin: 0 10px;
