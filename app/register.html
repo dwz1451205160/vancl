@@ -35,14 +35,14 @@
                         </span>
                     </h1>
                 </div>
-                <form action="" method="" class="menu">
+                <form action="" method="POST" class="menu">
                     <input type="text" placeholder="验证码" class="yzm" ><a href="#" class="code"> </a><br>
                     <p class=""></p>
-                    <input type="text" placeholder="填写手机号" data-error="请输入有效的手机号" class="yzm"><a href="#" class="code1">获取短信验证码</a><br>
+                    <input type="text" placeholder="填写手机号" data-error="请输入有效的手机号" name="phone" class="yzm"><a href="#" class="code1">获取短信验证码</a><br>
                     <p class=""></p>
                     <input type="text" placeholder="填写手机验证码" data-error="" class="phone"><br>
                     <p class=""></p>
-                    <input type="text" placeholder="设定登录密码" class="phone"><br>
+                    <input type="text" placeholder="设定登录密码" name="password" class="phone"><br>
                     <p class=""></p>
                     <input type="text" placeholder="再次输入密码" class="phone">
                     <p class=""></p>
@@ -80,6 +80,11 @@
             </ul>
         </div>
     </footer>
+    <script src="../app/staic/js/ajax.0.1.0.js"></script>
+    <script src="../app/staic/js/register.js"></script>
+    <script>
+        getRegister.init('form');
+    </script>
 </body>
 
 </html>
