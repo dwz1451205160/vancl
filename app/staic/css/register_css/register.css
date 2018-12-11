@@ -70,6 +70,10 @@ html,body{
     margin: 36px 0 0 122px;
     position: relative;
 }
+.menu .iphone{
+    width: 415px;
+    height: 47px;
+}
 .menu p{
     display: block;
     position: absolute;
