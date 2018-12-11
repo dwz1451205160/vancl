@@ -1,0 +1,164 @@
+*{
+    margin: 0;padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+#navBox{
+    margin: 0 auto;
+    margin-top: 120px;
+    width: 1200px;
+    height: 22px;
+}
+
+.navLogo1{
+    float: left;
+    display: block;
+    width: 185px;
+    height: 46px;
+    background: url(../image/logo185.png)
+}
+#navList{
+    margin-left: 20px;
+    margin-top: 24px;
+    float: left;
+    display: flex;
+}
+#navList a:hover{
+    color: #b42025;
+}
+#navList li{
+    width: 99px;
+    height: 32px;
+    text-align: center;
+}
+#navList li span{
+    display: block;
+    position: absolute;
+    top: 152px;
+    height: 16px;
+    width: 1px;
+    border-right: solid 1px #888;
+}
+#navList .navsub{
+    background:white;
+    border-top: 5px solid #b42025;
+    border-left: 1px solid rgb(250, 248, 248);
+    border-right: 1px solid rgb(250, 248, 248);
+    border-bottom: 1px solid rgb(248, 246, 246);
+    position: relative;
+    z-index: 9999;
+    top: 10px;
+    display: none;
+}
+#navList .navsub ul li{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+
+
+
+.show{
+    margin: 0 auto;
+    margin-top: 57px;
+    width: 1200px;
+    height: 535px;
+    position: relative;
+}
+.show ul li{
+    position: absolute;
+    display: none;
+}
+.show ul li:nth-child(1){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/lunbo1.jpg)
+}
+.show ul li:nth-child(2){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/lunbo2.jpg)
+}
+.show ul li:nth-child(3){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/lunbo3.jpg)
+}
+.show ul li:nth-child(4){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/lunbo4.jpg)
+}
+.show ul li:nth-child(5){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/lunbo5.jpg)
+}
+.show ul li:nth-child(6){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/lunbo6.jpg)
+}
+.show ul li a{
+    display: block;
+    width: 1200px;
+    height: 535px;
+}
+.show ol {
+    position: absolute;
+    right: 500px;
+    bottom: 23px;
+    width: 200px;
+}
+
+.show ol li {
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: default;
+    background-color: #dddddd;
+    cursor:pointer;
+}
+ul li.act {
+    display: block;
+}
+ol li.set {
+    background: #b42025;
+}
+.left-btn{
+    position: absolute;
+    top: 235px;
+    left: 10px;
+    width: 25px;
+    height: 60px;
+    background-image: url(../image/lunbo-tip.png);
+    z-index: 9;
+}
+.right-btn{
+    position: absolute;
+    top: 235px;
+    left: 1165px;
+    width: 25px;
+    height: 60px;
+    background-image: url(../image/lunbo-tip.png);
+    background-position: 26px 0;
+    z-index: 9;
+}
+.left-btn:hover{
+    background-position: 0 64px;
+    cursor:pointer;
+}
+.right-btn:hover{
+    background-position: 26px 64px;
+    cursor:pointer;
+}
