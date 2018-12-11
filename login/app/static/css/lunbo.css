@@ -48,7 +48,7 @@ ol li.set {
     width: 25px;
     height: 60px;
     background-image: url(../image/lunbo-tip.png);
-    z-index: 9999;
+    z-index: 9;
 }
 .right-btn{
     position: absolute;
@@ -58,7 +58,7 @@ ol li.set {
     height: 60px;
     background-image: url(../image/lunbo-tip.png);
     background-position: 26px 0;
-    z-index: 9999;
+    z-index: 9;
 }
 .left-btn:hover{
     background-position: 0 64px;

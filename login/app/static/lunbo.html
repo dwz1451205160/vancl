@@ -30,62 +30,7 @@
     </div>
     <script src="js/lunbo.js"></script>
     <script>
-        var swiper = (function () {
-        var $liAll = document.querySelectorAll('#box li');
-        var $tipAll = document.querySelectorAll('#box2 li');
-        var $prevBtn = document.querySelector('.left-btn');
-        var $nextBtn = document.querySelector('.right-btn');
-        var timer = null;
-        var showIndex = 0;
-        return {
-            init() {
-                this.event();
-                this.autoPlay();
-            },
-            event() {
-                var _this = this;
-                $prevBtn.onclick = function () {
-                _this.showImage(--_this.index);
-                _this.autoPlay(_this.index); 
-            }
-            $nextBtn.onclick = function () {
-                _this.showImage(++_this.index);
-                _this.autoPlay(_this.index); 
-            }
-                for (var i = 0; i < $tipAll.length; i++) {
-                    $tipAll[i].index = i;
-                    $tipAll[i].onmouseenter = function () {
-                        _this.showImage(this.index);
-                        _this.autoPlay(this.index);  
-                    }
-                }
-            },
-            showImage(index) {
-                if(index >= $tipAll.length || index < 0) {
-                    index = 0;
-                    showIndex = index;
-                }
-                for (var i = 0; i < $tipAll.length; i++) {
-                    $tipAll[i].removeAttribute('class');
-                    move($liAll[i], {opacity: 0}, 500, function(ele){
-                        ele.removeAttribute('class');
-                    });
-                }
-                $tipAll[index].setAttribute('class', 'set');
-                $liAll[index].setAttribute('class', 'act');
-                move($liAll[index], {opacity: 100}, 500);
-            },
-            autoPlay(index = 0) {
-                showIndex = index;
-                clearInterval(timer);
-                timer = setInterval(_ => {
-                    showIndex++;
-                    this.showImage(showIndex);
-                }, 2000)   
-            }
-        }
-    }())
-    swiper.init();
+        swiper.init();
     </script>
 </body>
 </html>
