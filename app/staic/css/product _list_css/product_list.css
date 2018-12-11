@@ -293,12 +293,14 @@ ul li .newprice strong em{
     box-sizing: border-box;
     padding: 31px 41px;
 } 
+.service_one{
+    height: 166px;
+}
 .service_one li{
     width: 370px;
     height: 138px;
     float: left;
     text-align: center;
-    margin: 12px 0 0 0;
 }
 .service_one li:nth-child(2){
     border-left: 1px solid #e0e0e1;
@@ -308,6 +310,7 @@ ul li .newprice strong em{
     display: block;
     width: 370px;
     height: 138px;
+    margin: 12px 0 0 0 ;
 }
 .service_one li .onlinetime{
     width: 156px;
@@ -333,4 +336,27 @@ ul li .newprice strong em{
 }
 .service_one li:nth-child(3) p em{
     color: #b50000;
+}
+.service ol{
+    width: 1118px;
+    height: 57px;
+    background: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.service ol li{
+    height: 26px;
+    line-height: 26px;
+    padding: 0 65px;
+    border-right: 1px solid #dadadb;
+}
+.service ol li:last-child{
+    border-right: none;
+}
+.service ol li a{
+    display: block;
+    font-size: 12px;
+    color: #000;
+    text-align: center;
 }
