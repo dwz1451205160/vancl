@@ -68,11 +68,16 @@ html,body{
 /* 表单 */
 .menu{
     margin: 36px 0 0 122px;
+    position: relative;
+}
+.menu p{
+    display: block;
+    position: absolute;
 }
 .menu .yzm{
     width: 260px;
-    height: 45px;
-    line-height: 45px;
+    height: 43px;
+    line-height: 43px;
     color: #acacac;
     padding: 0 0 0 10px;
     border: 1px solid #acacac;
@@ -90,7 +95,7 @@ html,body{
     background: url(../../images/register_image/image02.jpg) no-repeat;
 }
 .menu .code1{
-    display: inline-block;
+    display: block;
     float: right;
     width: 138px;
     height: 43px; 
@@ -145,7 +150,7 @@ html,body{
 ul{
     display: flex;
     justify-content: center;
-    width: 1200px
+    width: 1200px;
 }
 ul li a i{
     margin: 0 10px;
