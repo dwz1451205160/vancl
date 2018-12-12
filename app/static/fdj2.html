@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车1</title>
+    <link rel="stylesheet" href="css/vancl.css">
+    <style>
+            .box {
+              padding: 20px;
+              margin-left: 100px;
+              margin-top: 100px;
+            }
+            .show-image {
+              position: relative;
+              width: 400px;
+              height: 400px;
+              font-size: 0;
+              border: 1px solid #ccc;
+              overflow: hidden;
+            }
+            .show-image img {
+              max-width: 100%;
+              max-height: 100%;
+            }
+            .filter {
+              position: absolute;
+              left: 0px;
+              top:0;
+              width: 150px;
+              height: 150px;
+              background: rgba(250, 248, 248, 0.6);
+              cursor: move;
+              display: none;
+            }
+            .img-box {
+              padding: 10px;
+              float: none;
+            }
+            .img-box>li {
+              display: inline-block;
+              border: 1px solid transparent;
+              margin-left: 10px;
+            }
+            .img-box>li img{
+              width: 68px;
+              height: 68px;
+            }
+            .img-box>li:hover,
+            .img-box>li.active {
+              border: 1px solid #a00000;
+            }
+            .show-big-image {
+              position: absolute;
+              left: 525px;
+              top: 200px;
+              width: 400px;
+              height: 400px;
+              overflow: hidden;
+              border: 1px solid #eee;
+              display: none;
+            }
+            .show-big-image img {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 1080px;
+            }
+          </style>
+</head>
+<body>
+    <div id="header_wrapper">
+        <div class="header content">
+            <p>您好,欢迎光临凡客诚品！</p>
+            <a href="login.html">登录</a>
+            <span>|</span>
+            <a href="register.html">注册</a>
+            <a href="#">我的订单</a>
+            <a href="#"><img src="image/common_img/notice.png" />网站公告</a>
+            <a href="#"><img src="image/common_img/w1.jpg" />
+                <span class="weibomap"></span>
+            </a>
+            <a href="#"><img src="image/common_img/w2.jpg" /></a>
+        </div>
+    </div>
+    <!-- 头部结束 -->
+    <!-- 搜索部分开始 -->
+    <div id="search-wrapper">
+        <div class="search content">
+            <div class="search_top">
+                <form action="" method="GET">
+                    <input type="text" name="ss" placeholder="搜“日式免烫衬衫”，体验与众不同">
+                    <input type="submit" value="搜 索">
+                </form>
+                <div class="shopping_cart">
+                    <div class="shopping_carttop"> 
+                        <a href="#">
+                            购物车（<span>0</span>）
+                        </a>
+                    </div>
+                    <div class="shopping_cartbottom">
+                        <h2>您的购物车中没有任何商品</h2>
+
+                    </div>                  
+                </div>
+            </div>
+            <div class="search_bottom">
+                <p>
+                    <span>热门搜索：</span>
+                    <a href="#">免烫衬衫</a>
+                    <a href="#">羽绒服</a>
+                    <a href="#">外套</a>
+                    <a href="#">熊本熊</a>
+                    <a href="#">运动户外</a>
+                    <a href="#">帆布鞋</a>
+                    <a href="#">水柔绵</a>
+                </p>
+            </div>
+        </div>
+    </div>
+<!-- 导航栏目 -->
+<div id="navBox">
+    <a class="navLogo1" href="http://www.vancl.com/"></a>
+<ul id="navList">
+    <li><a href="">首页</a></li>
+    <li class="navsua1"><a href="">衬衫<em style="display:block;width:25px; height:13px; background:url(http://i3.vanclimg.com/cms/20170329/icon_hot.png) no-repeat scroll; position:absolute;left:492px;top:143px;"></em></a><span></span><div class="navsub1"><ul>
+        <li><a href="">免烫</a></li>
+        <li><a href="">易打理</a></li>
+        <li><a href="">休闲</a></li>
+        <li><a href="">高支</a></li>
+        <li><a href="">法兰绒</a></li>
+        <li><a href="">牛津纺</a></li>
+        <li><a href="">青年布</a></li>
+        <li><a href="">牛仔</a></li>
+        <li><a href="">麻</a></li>
+        <li><a href="">水洗棉</a></li>
+        <li><a href="">泡泡纱</a></li>
+    </ul></div></li>
+    <li class="navsua2"><a href="">羽绒服</a><span></span><div class="navsub2"><ul>
+        <li><a href="">短款羽绒服</a></li>
+        <li><a href="">长款羽绒服</a></li>
+    </ul></div></li>
+    <li class="navsua3"><a href="">卫衣</a><span></span><div class="navsub3">
+        <ul>
+            <li><a href="">熊本熊</a></li>
+            <li><a href="">开衫</a></li>
+            <li><a href="">连帽</a></li>
+            <li><a href="">圆领</a></li>
+            <li><a href="">水柔棉</a></li>
+        </ul>
+    </div></li>
+    <li class="navsua4"><a href="">外套</a><span></span><div class="navsub4">
+        <ul>
+            <li><a href="">运动户外</a></li>
+            <li><a href="">皮肤衣</a></li>
+            <li><a href="">西服</a></li>
+            <li><a href="">C9设计款</a></li>
+            <li><a href="">夹克</a></li>
+            <li><a href="">nautilus</a></li>
+            <li><a href="">大衣</a></li>
+            <li><a href="">羽绒服</a></li>
+        </ul>
+    </div></li>
+    <li class="navsua5"><a href="">针织衫</a><span></span><div class="navsub5">
+        <ul>
+            <li><a href="">空调衫</a></li>
+            <li><a href="">棉线衫</a></li>
+            <li><a href="">羊毛衫</a></li>
+            <li><a href="">羊绒衫</a></li>
+        </ul>
+    </div></li>
+    <li class="navsua6"><a href="">裤装</a><span></span><div class="navsub6">
+        <ul>
+            <li><a href="">沙滩裤</a></li>
+            <li><a href="">针织裤</a></li>
+            <li><a href="">休闲裤</a></li>
+            <li><a href="">牛仔裤</a></li>
+            <li><a href="">运动裤</a></li>
+        </ul>
+    </div></li>
+    <li class="navsua7"><a href="">鞋</a><span></span><div class="navsub7">
+        <ul>
+            <li><a href="">复古跑鞋</a></li>
+            <li><a href="">帆布鞋</a></li>
+            <li><a href="">休闲鞋</a></li>
+        </ul>
+    </div></li>
+    <li class="navsua8"><a href="">家具配饰</a><span></span><div class="navsub8">
+        <ul>
+            <li><a href="">床品套件</a></li>
+            <li><a href="">被子</a></li>
+            <li><a href="">枕</a></li>
+            <li><a href="">家居服</a></li>
+            <li><a href="">家居鞋</a></li>
+            <li><a href="">背提包</a></li>
+            <li><a href="">拉杆箱</a></li>
+            <li><a href="">皮带钱包</a></li>
+            <li><a href="">帽子</a></li>
+            <li><a href="">毛巾</a></li>
+        </ul>
+    </div></li>
+    <li class="navsua9"><a href="">内衣袜品</a><span></span><div class="navsub9">
+        <ul>
+            <li><a href="">船袜</a></li>
+            <li><a href="">中筒袜</a></li>
+            <li><a href="">连裤袜</a></li>
+            <li><a href="">内衣裤</a></li>
+            <li><a href="">围巾披肩</a></li>
+            <li><a href="">童装</a></li>
+        </ul>
+    </div></li>
+</ul>
+</div>
+
+<!-- 放大镜 -->
+<div class="box">
+        <div class="show-image">
+          <img src="image/fdj2_img/zhong1.jpg" alt="">
+          <span class="filter"></span>
+        </div>
+        <div class="show-big-image">
+            <img src="image/fdj2_img/da1.jpg" alt="" id="big-image">
+        </div>
+        <ul class="img-box">
+          <li class="active"><img src="image/fdj2_img/zhong1.jpg" alt=""></li>
+          <li><img src="image/fdj2_img/zhong2.jpg" alt=""></li>
+          <li><img src="image/fdj2_img/zhong3.jpg" alt=""></li>
+          <li><img src="image/fdj2_img/zhong4.jpg" alt=""></li>
+          <li><img src="image/fdj2_img/zhong5.jpg" alt=""></li>
+        </ul>
+      </div>
+      <script src="js/login_js/glass.js"></script>
+      <script>
+         glass.init(2)
+      </script>
+</body>
+</html>
+<script src="js/login_js/jquery-3.3.1.js"></script>
+<script src="js/login_js/lunbo.js"></script>
