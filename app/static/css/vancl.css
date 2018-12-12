@@ -1,6 +1,191 @@
+@charset "utf-8";
+/* CSS Document */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,textarea,select{	
+	margin:0px;
+	padding:0px;
+}
+body,html{
+	font: "微软雅黑",Arial;	
+}
+li{
+	list-style:none;	
+}
+a{
+	text-decoration:none;
+}
+h1,h2,h3,h4,h5,h6,strong,b{
+	font-weight:normal;
+	font-size:100%;	
+}
+i,em{
+	font-style:normal;	
+}
+input{
+	outline:none;	
+}
+.clearfix:after{
+	content:' ';
+	display:block;
+	clear:both;
+	height:0;
+	overflow:hidden;
+	visibility:hidden;	
+}
 html,body{
     background: #FFF;
 }
+#navBox{
+    margin: 0 auto;
+    margin-top: 120px;
+    width: 1200px;
+    height: 22px;
+}
+
+.navLogo1{
+    float: left;
+    display: block;
+    width: 185px;
+    height: 46px;
+    background: url(../image/login_img/logo185.png)
+}
+#navList{
+    margin-left: 20px;
+    margin-top: 24px;
+    float: left;
+    display: flex;
+}
+#navList a:hover{
+    color: #b42025;
+}
+#navList li{
+    width: 99px;
+    height: 32px;
+    text-align: center;
+}
+#navList li span{
+    display: block;
+    position: absolute;
+    top: 152px;
+    height: 16px;
+    width: 1px;
+    border-right: solid 1px #888;
+}
+#navList .navsub{
+    background:white;
+    border-top: 5px solid #b42025;
+    border-left: 1px solid rgb(250, 248, 248);
+    border-right: 1px solid rgb(250, 248, 248);
+    border-bottom: 1px solid rgb(248, 246, 246);
+    position: relative;
+    z-index: 9999;
+    top: 10px;
+    display: none;
+}
+#navList .navsub ul li{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+.show{
+    margin: 0 auto;
+    margin-top: 57px;
+    width: 1200px;
+    height: 535px;
+    position: relative;
+}
+.show ul li{
+    position: absolute;
+    display: none;
+}
+.show ul li:nth-child(1){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/login_img/lunbo1.jpg)
+}
+.show ul li:nth-child(2){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/login_img/lunbo2.jpg)
+}
+.show ul li:nth-child(3){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/login_img/lunbo3.jpg)
+}
+.show ul li:nth-child(4){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/login_img/lunbo4.jpg)
+}
+.show ul li:nth-child(5){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/login_img/lunbo5.jpg)
+}
+.show ul li:nth-child(6){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/login_img/lunbo6.jpg)
+}
+.show ul li a{
+    display: block;
+    width: 1200px;
+    height: 535px;
+}
+.show ol {
+    position: absolute;
+    right: 500px;
+    bottom: 23px;
+    width: 200px;
+}
+
+.show ol li {
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: default;
+    background-color: #dddddd;
+    cursor:pointer;
+}
+ul li.act {
+    display: block;
+}
+ol li.set {
+    background: #b42025;
+}
+.left-btn{
+    position: absolute;
+    top: 235px;
+    left: 10px;
+    width: 25px;
+    height: 60px;
+    background-image: url(../image/login_img/lunbo-tip.png);
+    z-index: 9;
+}
+.right-btn{
+    position: absolute;
+    top: 235px;
+    left: 1165px;
+    width: 25px;
+    height: 60px;
+    background-image: url(../image/login_img/lunbo-tip.png);
+    background-position: 26px 0;
+    z-index: 9;
+}
+.left-btn:hover{
+    background-position: 0 64px;
+    cursor:pointer;
+}
+.right-btn:hover{
+    background-position: 26px 64px;
+    cursor:pointer;
+}
+
 #top_up_wrap{
     height: 60px;
 }
@@ -42,7 +227,7 @@ html,body{
     display: block;
     width: 1200px;
     height: 64px;
-    background: url(../../image/list_image/mm.jpg);
+    background: url(../image/list_image/mm.jpg);
     margin-top: 20px;
 }
 /* 上列表 */
@@ -97,7 +282,7 @@ ul li .newprice strong em{
     display: block;
     height: 213px;
     width: 1200px;
-    background: url(../../image/list_image/pc2_02.jpg) no-repeat;
+    background: url(../image/list_image/pc2_02.jpg) no-repeat;
 }
 #list_center_wrap ul{
     overflow: hidden;
@@ -119,7 +304,7 @@ ul li .newprice strong em{
     display: block;
     width: 1200px;
     height: 209px;
-    background: url(../../image/list_image/qczjsy_02.jpg) no-repeat;
+    background: url(../image/list_image/qczjsy_02.jpg) no-repeat;
 }
 
 #list_bottom_wrap ul{
@@ -390,7 +575,7 @@ ul li .newprice strong em{
 }
 .footer_top ul li i{
     display: block;
-    background: url(../../image/list_image/jlt.png) no-repeat;
+    background: url(../image/list_image/jlt.png) no-repeat;
 }
 .footer_top .icon88{
     width: 112px;
