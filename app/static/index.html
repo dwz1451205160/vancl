@@ -75,9 +75,6 @@
     <!-- <script src="js/ajax.js"></script> -->
     <script>
         const searchInp = (function () {
-            function fn() {
-
-            }
             return {
                 init(ele) {
                     this.$searchBox = document.querySelector(ele);
@@ -88,69 +85,71 @@
                 event() {
                     const _this = this;
                     const $inp = this.$searchInp
+                    //鼠标进入
                     $inp.oninput = function () {
                         if (this.value != '') {
-                            // 获取数据
                             clearTimeout(this.time);
-                            // 减少http请求
+                            //获取数据，不让立马发送请求，尽量减少请求次数
                             this.time = setTimeout(_ => {
                                 _this.getData(this.value);
                             }, 500)
+
                         } else {
                             _this.$searchRes.style.display = 'none';
                         }
+
                     }
+                    //获取焦点
                     $inp.onfocus = function () {
+                        //显示结果栏
                         if (this.value != '') {
                             _this.$searchRes.style.display = 'block';
                         }
-                    }
-                    $inp.onblur = function () {
-                        // 隐藏结果栏
-                        _this.$searchRes.style.display = 'none';
 
                     }
+                    //失去焦点
+                    $inp.onblur = function () {
+                        //隐藏结果栏
+                        _this.$searchRes.style.display = 'none';
+                    }
+
                 },
-                // 获取数据
+                //获取数据
                 getData(val) {
                     const _this = this;
-                    //    sendAjax('json/search.json', {
-                    //        data: {
-                    //            wd: val
-                    //        }
-                    //    }).then(data => {
-                    //        console.log(data);
-                    //        data = JSON.parse(data);
-                    //        _this.insertData(data.s);
-                    //    })
                     
                     sendJsonp('http://page.vanclimg.com/autocompletehandler.ashx', {
-                        wd: val,
-                        cb: "insertData"
+                        k: val,
+                        callback: "insertData",
+                        limit: 13
                     })
+
                 },
-                // 把数据渲染到列表中
+                //把数据(数组)渲染到列表中
                 insertData(data) {
                     console.log(data);
-                    data = data.s;
+                    console.log(6666);
                     this.$searchRes.innerHTML = '';
-                    for (let i = 0; i < data.length; i++) {
+                    for (var key in data) {
+                        console.log(data[key]);
                         let $li = document.createElement('li');
-                        $li.innerHTML = data[i];
+                        if (data[key].count < 0) {
+                            data[key].count = 0;
+                        }
+                        $li.innerHTML = data[key].name + '  约' + data[key].count + '条';
                         this.$searchRes.appendChild($li);
                     }
+                    //显示
                     this.$searchRes.style.display = 'block';
+                    console.log(777);
                 }
             }
         }())
         searchInp.init('.search_box');
-
-
     </script>
-    <script>
-        // call, apply, bind
-        var insertData = searchInp.insertData.bind(searchInp);
 
+    <script>
+        var insertData = searchInp.insertData.bind(searchInp);   
     </script>
 </body>
 

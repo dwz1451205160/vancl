@@ -107,7 +107,7 @@
     color: #000000;
 }
 .search_box .search_result{
-    display: none;
+    /* display: none; */
 }
 .search_box .search_ss{
     width: 47px;
