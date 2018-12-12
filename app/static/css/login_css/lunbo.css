@@ -20,7 +20,7 @@ a{
     display: block;
     width: 185px;
     height: 46px;
-    background: url(../image/logo185.png)
+    background: url(../../image/login_img/logo185.png)
 }
 #navList{
     margin-left: 20px;
@@ -79,32 +79,32 @@ a{
 .show ul li:nth-child(1){
     width: 1200px;
     height: 535px;
-    background: url(../image/lunbo1.jpg)
+    background: url(../../image/login_img/lunbo1.jpg)
 }
 .show ul li:nth-child(2){
     width: 1200px;
     height: 535px;
-    background: url(../image/lunbo2.jpg)
+    background: url(../../image/login_img/lunbo2.jpg)
 }
 .show ul li:nth-child(3){
     width: 1200px;
     height: 535px;
-    background: url(../image/lunbo3.jpg)
+    background: url(../../image/login_img/lunbo3.jpg)
 }
 .show ul li:nth-child(4){
     width: 1200px;
     height: 535px;
-    background: url(../image/lunbo4.jpg)
+    background: url(../../image/login_img/lunbo4.jpg)
 }
 .show ul li:nth-child(5){
     width: 1200px;
     height: 535px;
-    background: url(../image/lunbo5.jpg)
+    background: url(../../image/login_img/lunbo5.jpg)
 }
 .show ul li:nth-child(6){
     width: 1200px;
     height: 535px;
-    background: url(../image/lunbo6.jpg)
+    background: url(../../image/login_img/lunbo6.jpg)
 }
 .show ul li a{
     display: block;
@@ -141,7 +141,7 @@ ol li.set {
     left: 10px;
     width: 25px;
     height: 60px;
-    background-image: url(../image/lunbo-tip.png);
+    background-image: url(../../image/login_img/lunbo-tip.png);
     z-index: 9;
 }
 .right-btn{
@@ -150,7 +150,7 @@ ol li.set {
     left: 1165px;
     width: 25px;
     height: 60px;
-    background-image: url(../image/lunbo-tip.png);
+    background-image: url(../../image/login_img/lunbo-tip.png);
     background-position: 26px 0;
     z-index: 9;
 }
