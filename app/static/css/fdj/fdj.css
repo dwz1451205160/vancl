@@ -1,65 +1,510 @@
+#header_wrapper{
+    height: 32px;
+    background: #f7f7f7;
+    border-bottom:1px solid #cccccc;
+}
+.content{
+	width: 1200px;
+	margin: 0 auto;
+}
 
+.header{
+    height: 32px;
+    background: #f7f7f7;
+}
+.header>p{
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 788px;
+    color: #808080;
+}
+.header a{
+    height: 32px;
+    line-height: 32px;
+    display:block;
+    float: left;
+}
+.header span{
+    display: block;
+    float: left;
+    color: #808080;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 6px 0 8px;
+}
+.header a img{
+    margin-top: 7px; 
+}
+.header a:nth-of-type(1){
+    margin-left: 2px;
+}
+.header a:nth-of-type(3){
+    margin: 0 16px 0 14px;
+   
+}
+.header a:nth-of-type(3):hover{
+    color: #b71c20;
+}
+.header a:nth-of-type(4){
+    margin-right: 13px;
+}
+.header a:nth-of-type(4):hover{
+    color: #b71c20;
+}
+.header a:nth-of-type(4) img{
+    margin-right: 9px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+.header a:nth-of-type(5){
+    margin-right: 2px;
+}
+.header a:nth-of-type(5) span{  
+    position: absolute;
+    width: 148px;
+    height: 169px;
+    right: 96px;
+    top: 30px;
+    border: 1px solid #e5e5e5;
+    background: url(../image/common_img/weixin.png) no-repeat;
+    overflow: hidden;
+    display: none;
+    z-index: 10000;
+}
+.header a:nth-of-type(5):hover span{
+    display: inline;
+}
+#search-wrapper{
+    height: 90px;
+    background: #ffffff;   
+}
+.search{
+    height: 90px;
+    box-sizing: border-box;
+    background: #ffffff;
+    padding-left: 760px; 
+    display: flex;
+    flex-direction: column; 
+}
+.search .search_top{
+    height: 58px;
+    width: 440px;
+    display: flex;
+    margin-top: 28px;
+    justify-content: space-between;
+}
+.search_top form input:nth-child(1){
+    width: 261px;
+    height: 23px;
+}
+.search_top form input:nth-child(2){
+    width: 49px;
+    height: 29px;
+    background: #b81b22;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-left: -4px;
+}
+/* 购物车 */
+.search_top .shopping_cart{
+    height: 29px;
+    width: 107px;
+    position: relative;
+}
+
+.shopping_cart .shopping_carttop{
+    height: 29px;
+    width: 107px;
+    border: 1px solid #c1383e;
+    border-bottom: none;
+    cursor:pointer; 
+}
+.shopping_carttop a{
+    display: inline-block;
+    width: 77px;
+    color: #ffffff;
+    height: 29px;
+    line-height: 29px;
+    padding-left: 30px;
+    background: url(../../image/common_img/vanclsprite.png) no-repeat;
+    background-position: -153px 0;
+}
+.shopping_carttop a:hover{
+    color: #b81b22;
+    background: url(../../image/common_img/vanclsprite.png) no-repeat;
+    background-position: -153px -29px;
+}
+ .shopping_cart .shopping_cartbottom{
+    position: absolute;
+    height: auto;
+    width: 300px;
+    border: 1px solid #c1383e;
+    background: #ffffff;
+    overflow: hidden;
+    right: -2px;
+    display: none;
+    z-index: 10000;
+ }
+ .shopping_cart:hover .shopping_cartbottom{
+   display: inline;
+   cursor:pointer;
+}
+
+.search .search_bottom{
+    height: 32px;
+    width: 44opx;
+   padding-left: 16px;
+}
+#navBox{
+    margin: 0 auto;
+    width: 1200px;
+    height: 22px;
+    
+}
+
+.navLogo1{
+    float: left;
+    display: block;
+    width: 185px;
+    height: 46px;
+    background: url(../../image/login_img/logo185.png)
+}
+#navList{
+    margin-left: 20px;
+    margin-top: 24px;
+    float: left;
+    display: flex;
+    overflow: hidden;
+}
+#navList a{
+    font-size: 16px;
+}
+#navList a:hover{
+    color: #b42025;
+}
+#navList li{
+    width: 99px;
+    height: 32px;
+    text-align: center;
+}
+#navList li span{
+    display: block;
+    position: absolute;
+    top: 152px;
+    height: 16px;
+    width: 1px;
+    border-right: solid 1px #888;
+}
+#navList div{
+    background:white;
+    border-top: 5px solid #b42025;
+    border-bottom: 1px solid rgb(248, 246, 246);
+    position: relative;
+    z-index: 9999;
+    top: 10px;
+    display: none;
+}
+#navList div ul li{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+.show{
+    margin: 0 auto;
+    margin-top: 54px;
+    width: 1200px;
+    height: 535px;
+    position: relative;
+}
+.show ul li{
+    position: absolute;
+    display: none;
+}
+.show ul li:nth-child(1){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/login_img/lunbo1.jpg)
+}
+.show ul li:nth-child(2){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/login_img/lunbo2.jpg)
+}
+.show ul li:nth-child(3){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/login_img/lunbo3.jpg)
+}
+.show ul li:nth-child(4){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/login_img/lunbo4.jpg)
+}
+.show ul li:nth-child(5){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/login_img/lunbo5.jpg)
+}
+.show ul li:nth-child(6){
+    width: 1200px;
+    height: 535px;
+    background: url(../image/login_img/lunbo6.jpg)
+}
+.show ul li a{
+    display: block;
+    width: 1200px;
+    height: 535px;
+}
+.show ol {
+    position: absolute;
+    right: 500px;
+    bottom: 23px;
+    width: 200px;
+}
+
+.show ol li {
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: default;
+    background-color: #dddddd;
+    cursor:pointer;
+}
+ul li.act {
+    display: block;
+}
+ol li.set {
+    background: #b42025;
+}
+.left-btn{
+    position: absolute;
+    top: 235px;
+    left: 10px;
+    width: 25px;
+    height: 60px;
+    background-image: url(../image/login_img/lunbo-tip.png);
+    z-index: 9;
+}
+.right-btn{
+    position: absolute;
+    top: 235px;
+    left: 1165px;
+    width: 25px;
+    height: 60px;
+    background-image: url(../image/login_img/lunbo-tip.png);
+    background-position: 26px 0;
+    z-index: 9;
+}
+.left-btn:hover{
+    background-position: 0 64px;
+    cursor:pointer;
+}
+.right-btn:hover{
+    background-position: 26px 64px;
+    cursor:pointer;
+}
+
+#top_up_wrap{
+    height: 60px;
+    margin-top: 50px
+}
+.top_up{
+    height: 60px;
+    background: #ef0916
+}
+.content{
+    width: 1200px;
+    margin: 0 auto;
+}
+.top_up a:nth-child(1){
+    display: inline-block;
+    width: 600px;
+    text-align: center;
+    color: #FFF;
+    line-height: 60px;
+    font-size: 26px;
+    font-weight: bold;
+}
+.top_up a:nth-child(2){
+    display: inline-block;
+    width: 224px;
+    height: 39px;
+    text-align: center;
+    color: #ef0916;
+    line-height: 39px;
+    font-size: 22px;
+    background: #FFF;
+    border-radius: 6px;
+    text-align: center;
+    margin: 0 0 0 282px;
+    font-weight: bold;
+}
+#count_time_wrap{
+    height: 64px;
+}
+.count_time a{
+    display: block;
+    width: 1200px;
+    height: 64px;
+    background: url(../image/list_image/mm.jpg);
+    margin-top: 20px;
+}
+/* 上列表 */
+#list_top_wrap ul{
+    width: 1200px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#list_top_wrap ul li{
+    width: 232px;
+}
+#list_top_wrap ul li a{
+    display: block;
+}
+#list_top_wrap ul li a p{
+    font-size: 16px;
+    color: #474747;
+    margin-top: 8px;
+    line-height: 20px;
+}
+ul li .oldprice{
+    display: block;
+    color: #d3d3d3;
+    text-decoration: line-through;
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+ul li .newprice{
+    display: block;
+}
+ul li .newprice i{
+    color: #BB2B34;
+    font-size: 16px;
+}
+ul li .newprice strong{
+    color:#474747;
+    font-size: 16px;
+    margin-left: 80px;
+}
+ul li .newprice strong em{
+    color: #BB2B34;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 商品详情 */
+#titleShow_wrap{
+    height: 45px;
+}
+.titleShow{
+    height: 45px;
+    border-bottom: 1px solid #E5E6E6;
+    overflow: hidden;
+}
+.content{
+    width: 1200px;
+    margin: 0 auto;
+}
+.titleShow h2{
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 45px;
+    margin-left: 10px;
+    float: left;
+}
+.titleShow h2 span{
+    color: #A10000;
+    font-size: 12px;
+    margin-left: 20px;
+}
+.titleShow ul{
+    float: right;
+    margin-right: 13px;
+}
+.titleShow ul li{
+    float: left;
+}
+.titleShow ul li a{
+    /* display: block; */
+    color: #808080;
+    font-size: 14px;
+    padding: 0 13px;
+    line-height: 45px
+}
+/* 放大镜 */
+#fdj_wrap{
+    height: 634px;
+}
+.fdj{
+    height: 634px;
+}
 .box {
-/* padding: 20px; */
-
-float: left;
+    /* padding: 20px; */
+    width: 634px;
+    padding-top: 70px;
 }
 .show-image {
-position: relative;
-top: -166px;
-left: 150px;
-width: 400px;
-height: 400px;
-font-size: 0;
-border: 1px solid #ccc;
-overflow: hidden;
+    position: relative;
+    top: -166px;
+    left: 150px;
+    width: 400px;
+    height: 400px;
+    font-size: 0;
+    border: 1px solid #ccc;
+    overflow: hidden;
 }
 .show-image img {
-width: 400px;
-height: 400px;
+    width: 400px;
+    height: 400px;
 }
 .filter {
-position: absolute;
-left: 0px;
-top:0;
-/* width: 150px;
-height: 150px; */
-background: rgba(255,255,255,0.6);
-cursor: move;
-display: none;
-}
-.small{
-    float: left;
+    position: absolute;
+    left: 0px;
+    top:0;
+    /* width: 150px;
+    height: 150px; */
+    background: rgba(255,255,255,0.6);
+    cursor: move;
+    display: none;
 }
 .img-box {
     width: 70px;
 }
 .img-box>li {
-display: inline-block;
-border: 1px solid transparent;
-margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid transparent;
+    margin-bottom: 10px;
 }
 .img-box>li img{
-max-width: 100%;
-max-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 .img-box>li:hover,
 .img-box>li.active {
-border: 2px solid #A10000;
+    border: 2px solid #A10000;
 }
 .show-big-image {
-position: absolute;
-left: 555px;
-top: 65px;
-width: 440px;
-height: 400px;
-overflow: hidden;
-border: 1px solid #000;
-display: none;
+    position: absolute;
+    left: 666px;
+    top: 290px;
+    width: 440px;
+    height: 400px;
+    overflow: hidden;
+    border: 1px solid #000;
+    display: none;
 }
 .show-big-image img {
-position: absolute;
-left: 0;
-top: 0;
-width: 1080px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 800px;
 }
