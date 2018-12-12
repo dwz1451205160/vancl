@@ -125,65 +125,65 @@ var swiper = (function () {
 
 // 导航
 $(".navsua1").on("mouseenter",function(){
-    $("div").eq(1).css("block");
-    $("div").eq(1).stop().slideDown("normal");
+    $(".navsub1").css("block");
+    $(".navsub1").stop().slideDown("normal");
     $(".navsua1").on("mouseleave",function(){
-        $("div").eq(1).stop().slideUp("normal");
+        $(".navsub1").stop().slideUp("normal");
     })
 });
 $(".navsua2").on("mouseenter",function(){
-    $("div").eq(2).css("block");
-    $("div").eq(2).stop().slideDown("normal");
+    $(".navsub2").css("block");
+    $(".navsub2").stop().slideDown("normal");
     $(".navsua2").on("mouseleave",function(){
-        $("div").eq(2).stop().slideUp("normal");
+        $(".navsub2").stop().slideUp("normal");
     })
 });
 $(".navsua3").on("mouseenter",function(){
-    $("div").eq(3).css("block");
-    $("div").eq(3).stop().slideDown("normal");
+    $(".navsub3").css("block");
+    $(".navsub3").stop().slideDown("normal");
     $(".navsua3").on("mouseleave",function(){
-        $("div").eq(3).stop().slideUp("normal");
+        $(".navsub3").stop().slideUp("normal");
     })
 });
 $(".navsua4").on("mouseenter",function(){
-    $("div").eq(4).css("block");
-    $("div").eq(4).stop().slideDown("normal");
+    $(".navsub4").css("block");
+    $(".navsub4").stop().slideDown("normal");
     $(".navsua4").on("mouseleave",function(){
-        $("div").eq(4).stop().slideUp("normal");
+        $(".navsub4").stop().slideUp("normal");
     })
 });
 $(".navsua5").on("mouseenter",function(){
-    $("div").eq(5).css("block");
-    $("div").eq(5).stop().slideDown("normal");
+    $(".navsub5").css("block");
+    $(".navsub5").stop().slideDown("normal");
     $(".navsua5").on("mouseleave",function(){
-        $("div").eq(5).stop().slideUp("normal");
+        $(".navsub5").stop().slideUp("normal");
     })
 });
 $(".navsua6").on("mouseenter",function(){
-    $("div").eq(6).css("block");
-    $("div").eq(6).stop().slideDown("normal");
+    $(".navsub6").css("block");
+    $(".navsub6").stop().slideDown("normal");
     $(".navsua6").on("mouseleave",function(){
-        $("div").eq(6).stop().slideUp("normal");
+        $(".navsub6").stop().slideUp("normal");
     })
 });
 $(".navsua7").on("mouseenter",function(){
-    $("div").eq(7).css("block");
-    $("div").eq(7).stop().slideDown("normal");
+    $(".navsub7").css("block");
+    $(".navsub7").stop().slideDown("normal");
     $(".navsua7").on("mouseleave",function(){
-        $("div").eq(7).stop().slideUp("normal");
+        $(".navsub7").stop().slideUp("normal");
     })
 });
 $(".navsua8").on("mouseenter",function(){
-    $("div").eq(8).css("block");
-    $("div").eq(8).stop().slideDown("normal");
+    $(".navsub8").css("block");
+    $(".navsub8").stop().slideDown("normal");
     $(".navsua8").on("mouseleave",function(){
-        $("div").eq(8).stop().slideUp("normal");
+        $(".navsub8").stop().slideUp("normal");
     })
 });
 $(".navsua9").on("mouseenter",function(){
-    $("div").eq(9).css("block");
-    $("div").eq(9).stop().slideDown("normal");
+    $(".navsub9").css("block");
+    $(".navsub9").stop().slideDown("normal");
     $(".navsua9").on("mouseleave",function(){
-        $("div").eq(9).stop().slideUp("normal");
+        $(".navsub9").stop().slideUp("normal");
     })
 });
