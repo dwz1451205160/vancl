@@ -122,7 +122,7 @@ html,body{
     height: 90px;
     box-sizing: border-box;
     background: #ffffff;
-    padding-left: 762px; 
+    padding-left: 760px; 
     display: flex;
     flex-direction: column; 
 }
@@ -133,26 +133,18 @@ html,body{
     margin-top: 28px;
     justify-content: space-between;
 }
-.search_top .search_box{
-    display: flex;
+.search_top form input:nth-child(1){
+    width: 261px;
+    height: 23px;
 }
-.search_box .search_input{
-    height: 26px;
-    width: 256px;
-    padding-left: 4px;
-}
-.search_box .search_input::-webkit-input-placeholder{
-    color: #000000;
-}
-.search_box .search_result{
-    display: none;
-}
-.search_box .search_ss{
-    width: 47px;
-    height: 29px;    
+.search_top form input:nth-child(2){
+    width: 49px;
+    height: 29px;
     background: #b81b22;
-    color: #ffffff;
-    cursor:pointer;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-left: -4px;
 }
 /* 购物车 */
 .search_top .shopping_cart{
@@ -247,8 +239,6 @@ html,body{
 #navList div{
     background:white;
     border-top: 5px solid #b42025;
-    border-left: 1px solid rgb(250, 248, 248);
-    border-right: 1px solid rgb(250, 248, 248);
     border-bottom: 1px solid rgb(248, 246, 246);
     position: relative;
     z-index: 9999;
@@ -264,7 +254,7 @@ html,body{
 
 .show{
     margin: 0 auto;
-    margin-top: 57px;
+    margin-top: 54px;
     width: 1200px;
     height: 535px;
     position: relative;
@@ -362,6 +352,7 @@ ol li.set {
 
 #top_up_wrap{
     height: 60px;
+    margin-top: 50px
 }
 .top_up{
     height: 60px;
@@ -772,4 +763,47 @@ ul li .newprice strong em{
     width: 45px;
     height: 45px;
     background-position: -202px -675px;
+}
+
+#bay{
+    width: 75px;
+    height: 206px;
+    position: fixed;
+    top: 502px;
+    left: 1338px;
+}
+#bay ul{
+    width: 75px;
+    height: 205px;
+    background: url(../image/login_img/bay.png)
+}
+#bay ul li:nth-child(1){
+    display: block;
+    width: 75px;
+    height: 76px;
+}
+#bay ul li:nth-child(2){
+    display: block;
+    width: 75px;
+    height: 71px;
+}
+#bay ul li:nth-child(3){
+    display: block;
+    width: 75px;
+    height: 30px;
+}
+#bay ul li:nth-child(1) a{
+    display: block;
+    width: 75px;
+    height: 76px;
+}
+#bay ul li:nth-child(2) a{
+    display: block;
+    width: 75px;
+    height: 71px;
+}
+#bay ul li:nth-child(3) a{
+    display: block;
+    width: 75px;
+    height: 55px;
 }
