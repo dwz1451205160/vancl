@@ -5,7 +5,7 @@ body,html{
 	font:12px "宋体",Arial;	
 	color: #333333;
 }
-li{
+li,ol{
 	list-style:none;	
 }
 a{
