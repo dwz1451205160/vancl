@@ -42,15 +42,17 @@
 }
 /* 放大镜 */
 #fdj_wrap{
-    height: 634px;
+    height: 426px;
 }
 .fdj{
-    height: 634px;
+    
 }
 .box {
     /* padding: 20px; */
     width: 634px;
+    height: 426px;
     padding-top: 40px;
+    float: left;
 }
 .show-image {
     position: relative;
@@ -94,8 +96,8 @@
 }
 .show-big-image {
     position: absolute;
-    left: 666px;
-    top: 290px;
+    left: 670px;
+    top: 85px;
     width: 440px;
     height: 400px;
     overflow: hidden;
@@ -106,5 +108,55 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 800px;
+    width: 1080px;
+}
+.fdj .box_right{
+    float: left;
+    margin-top: 30px;
+}
+.top_price i{
+    color: #A10000;
+    font-size: 12px;
+}
+.top_price span{
+    color: #A10000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.top_price strong a{
+    color: #A10000;
+    margin-left: 20px;
+}
+.getColor{
+    margin-top: 24px;
+}
+.getColor span{
+    color: #000;
+    font-size: 12px;
+    float: left;
+}
+.getColor ul{
+    float: left;
+}
+.getColor ul li{
+    width: 94px;
+    height: 36px;
+    border: 1px solid #B4B4B4;
+    float: left;
+    margin: 0 5px;
+    background: url(../../image/fdj/color01.jpg) no-repeat;
+}
+.getColor ul li:nth-child(2){
+    background: url(../../image/fdj/color02.jpg) no-repeat;
+}
+.getColor ul li:nth-child(3){
+    background: url(../../image/fdj/color03.jpg) no-repeat;
+}
+.getColor ul li a{
+    display: block;
+    width: 94px;
+    height: 36px; 
+    line-height: 36px;  
+    vertical-align: middle;
+    padding-left: 40px;
 }
