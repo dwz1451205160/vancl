@@ -28,7 +28,7 @@ var glass = (function () {
         event: function () {
             var _this = this;
             // 利用事件委托，给每一个li添加点击事件
-            this.$ulbox.onclick = function (ev) {
+            this.$ulbox.onmouseover = function (ev) {
                 ev = ev || window.event;
                 var target = ev.target || ev.srcElement;
                 console.log(target.nodeName);

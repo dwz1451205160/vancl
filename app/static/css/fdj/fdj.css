@@ -129,6 +129,7 @@
 }
 .getColor{
     margin-top: 24px;
+    overflow: hidden;
 }
 .getColor span{
     color: #000;
@@ -159,4 +160,73 @@
     line-height: 36px;  
     vertical-align: middle;
     padding-left: 40px;
+}
+.getColor ul li:hover{
+    border-color: #A10000;
+}
+.urse_buy .buy_buy{
+    display: inline-block;
+    width: 168px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #B71B21;
+    font-size: 14px;
+    background: #F7ABAF;
+    border: 1px solid #B71B21;
+}
+.urse_buy .buy_car{
+    display: inline-block;
+    width: 170px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    background: #B81C22;
+}
+.urse_buy .buy_car i{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.size{
+    width: 335px;
+    height: 32px;
+    margin: 20px 0;
+}
+.size span{
+    color: #000;
+    font-size: 12px;
+    float: left;
+}
+.size ul li{
+    float: left;
+    border: 1px solid #C8C8C8;
+    padding: 6px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.size ul li:hover{
+    border-color: #A10000;
+}
+.quantity span{
+    color: #000;
+    font-size: 12px;
+}
+.quantity select{
+    width: 50px;
+    margin-bottom: 20px;
+}
+.selected{
+    margin-bottom: 20px;
+}
+.selected span{
+    color: #000;
+    font-size: 12px;
+}
+.Preferential{
+    width: 400px;
+    height: 52px;
+    background: url(../../image/fdj/yh.jpg) no-repeat;
+    margin-top: 20px;
 }
