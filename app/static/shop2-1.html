@@ -9,8 +9,7 @@
     <style>
             .box {
               padding: 20px;
-              margin-left: 100px;
-              margin-top: 100px;
+              margin-left: 260px;
             }
             .show-image {
               position: relative;
@@ -19,6 +18,32 @@
               font-size: 0;
               border: 1px solid #ccc;
               overflow: hidden;
+            }
+            .asd{
+                margin-left: 110px
+            }
+            .asd2{
+                position: absolute;
+                display: flex;
+                width: 412px;
+                height: 341px;
+                left: 750px;
+                top: 300px;
+                background: url(image/fdj2_img/asd2.png)
+            }
+            .asd2 .buy{
+                display: block;
+                width: 170px;
+                height: 32px;
+                margin-top: 234px;
+                margin-left: 4px;
+            }
+            .asd2 .shop{
+                display: block;
+                width: 170px;
+                height: 32px;
+                margin-top: 234px;
+                margin-left: 12px;
             }
             .show-image img {
               max-width: 100%;
@@ -36,12 +61,16 @@
             }
             .img-box {
               padding: 10px;
-              float: none;
+              position: absolute;
+              left: 120px;
+              top: 280px
             }
             .img-box>li {
-              display: inline-block;
+              /* display: inline-block; */
               border: 1px solid transparent;
-              margin-left: 10px;
+              width: 68px;
+              height: 68px;
+              margin: 10px 0;
             }
             .img-box>li img{
               width: 68px;
@@ -49,11 +78,12 @@
             }
             .img-box>li:hover,
             .img-box>li.active {
-              border: 1px solid #a00000;
+              border: 2px solid #a00000;
             }
             .show-big-image {
               position: absolute;
-              left: 525px;
+              z-index: 9999;;
+              left: 682px;
               top: 200px;
               width: 400px;
               height: 400px;
@@ -95,7 +125,7 @@
                 </form>
                 <div class="shopping_cart">
                     <div class="shopping_carttop"> 
-                        <a href="#">
+                        <a href="shop2-2.html">
                             购物车（<span>0</span>）
                         </a>
                     </div>
@@ -212,7 +242,7 @@
     </div></li>
 </ul>
 </div>
-
+<div class="asd"><img src="image/fdj2_img/asd.png" alt=""></div>
 <!-- 放大镜 -->
 <div class="box">
         <div class="show-image">
@@ -223,13 +253,17 @@
             <img src="image/fdj2_img/da1.jpg" alt="" id="big-image">
         </div>
         <ul class="img-box">
-          <li class="active"><img src="image/fdj2_img/zhong1.jpg" alt=""></li>
-          <li><img src="image/fdj2_img/zhong2.jpg" alt=""></li>
-          <li><img src="image/fdj2_img/zhong3.jpg" alt=""></li>
-          <li><img src="image/fdj2_img/zhong4.jpg" alt=""></li>
-          <li><img src="image/fdj2_img/zhong5.jpg" alt=""></li>
+          <li class="active"><img src="image/fdj2_img/xiao1.jpg" alt=""></li>
+          <li><img src="image/fdj2_img/xiao2.jpg" alt=""></li>
+          <li><img src="image/fdj2_img/xiao3.jpg" alt=""></li>
+          <li><img src="image/fdj2_img/xiao4.jpg" alt=""></li>
+          <li><img src="image/fdj2_img/xiao5.jpg" alt=""></li>
         </ul>
       </div>
+      <div class="asd2">
+          <a href="" class="buy"></a>
+          <a href="" class="shop"></a>
+        </div>
       <script src="js/login_js/glass.js"></script>
       <script>
          glass.init(2)

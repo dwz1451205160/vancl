@@ -25,12 +25,12 @@ var glass = (function () {
             }
 
             this.event();
-
+            this.showImage();
         },
         event: function () {
             var _this = this;
             // 利用事件委托，给每一个li添加点击事件
-            this.$ulbox.onclick = function (ev) {
+            this.$ulbox.onmouseover = function (ev) {
                 ev = ev || window.event;
                 var target = ev.target || ev.srcElement;
                 console.log(target.nodeName);
@@ -97,8 +97,8 @@ var glass = (function () {
             this.$liAll[index].className = 'active';
             // 修改对应的图片地址
             var src = this.$liAll[index].querySelector('img').getAttribute('src');
-            this.$showImage.querySelector('img').src = src.replace('small', 'big');
-            this.$showBigImage.querySelector('img').src = src.replace('small', 'largest');
+            this.$showImage.querySelector('img').src = src.replace('xiao', 'zhong');
+            this.$showBigImage.querySelector('img').src = src.replace('xiao', 'da');
             console.log(src);
         }
     }
