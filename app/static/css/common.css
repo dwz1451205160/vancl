@@ -116,6 +116,8 @@
     width: 262px;
     height: auto;
     border: 1px solid #000000;
+    z-index: 9999;
+    cursor:pointer;
 }
 .search_box .search_ss{
     width: 47px;
