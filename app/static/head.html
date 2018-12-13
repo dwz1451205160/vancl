@@ -27,10 +27,13 @@
             <div id="search-wrapper">
                 <div class="search content">
                     <div class="search_top">
-                        <form action="" method="GET">
-                            <input type="text" name="ss" placeholder="搜“日式免烫衬衫”，体验与众不同">
-                            <input type="submit" value="搜 索">
-                        </form>
+                            <form action="" method="GET" class="search_box">
+                                    <input type="text" class="search_input" name="ss" placeholder="搜“日式免烫衬衫”，体验与众不同">
+                                    <ul class="search_result">
+                                        <li>人之初，性本善</li>
+                                    </ul>
+                                    <input type="submit" value="搜 索" class="search_ss">
+                                </form>
                         <div class="shopping_cart">
                             <div class="shopping_carttop"> 
                                 <a href="#">
@@ -212,6 +215,11 @@
                 </ul>
             </div>
         </footer>
+        <script src="js/searchbox_js/search_jsonp.js"></script>
+    <script src="js/searchbox_js/search_box.js"></script>
+    <script>
+        var insertData = searchInp.insertData.bind(searchInp);   
+    </script>
     <script src="js/login_js/jquery-3.3.1.js"></script>
     <script src="js/login_js/lunbo.js"></script>
 </body>

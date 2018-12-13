@@ -122,7 +122,7 @@ html,body{
     height: 90px;
     box-sizing: border-box;
     background: #ffffff;
-    padding-left: 760px; 
+    padding-left: 762px; 
     display: flex;
     flex-direction: column; 
 }
@@ -133,18 +133,36 @@ html,body{
     margin-top: 28px;
     justify-content: space-between;
 }
-.search_top form input:nth-child(1){
-    width: 261px;
-    height: 23px;
+.search_top .search_box{
+    display: flex;
+    position: relative;
 }
-.search_top form input:nth-child(2){
-    width: 49px;
-    height: 29px;
+.search_box .search_input{
+    height: 23px;
+    width: 256px;
+    padding-left: 4px;
+}
+.search_box .search_input::-webkit-input-placeholder{
+    color: #000000;
+    font-size: 10px;
+}
+.search_box .search_result{
+    display: none;
+    position: absolute;
+    top: 29px;
+    background: #f7f7f7;
+    width: 262px;
+    height: auto;
+    border: 1px solid #000000;
+    z-index: 9999;
+    cursor:pointer;
+}
+.search_box .search_ss{
+    width: 47px;
+    height: 29px;    
     background: #b81b22;
-    border: none;
-    cursor: pointer;
-    color: white;
-    margin-left: -4px;
+    color: #ffffff;
+    cursor:pointer;
 }
 /* 购物车 */
 .search_top .shopping_cart{
