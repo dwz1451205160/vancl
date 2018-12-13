@@ -1,3 +1,234 @@
+#header_wrapper{
+    height: 32px;
+    background: #f7f7f7;
+    border-bottom:1px solid #cccccc;
+}
+.content{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.header{
+    height: 32px;
+    background: #f7f7f7;
+}
+.header>p{
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 788px;
+    color: #808080;
+}
+.header a{
+    height: 32px;
+    line-height: 32px;
+    display:block;
+    float: left;
+}
+.header span{
+    display: block;
+    float: left;
+    color: #808080;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 6px 0 8px;
+}
+.header a img{
+    margin-top: 7px; 
+}
+.header a:nth-of-type(1){
+    margin-left: 2px;
+}
+.header a:nth-of-type(3){
+    margin: 0 16px 0 14px;
+   
+}
+.header a:nth-of-type(3):hover{
+    color: #b71c20;
+}
+.header a:nth-of-type(4){
+    margin-right: 13px;
+}
+.header a:nth-of-type(4):hover{
+    color: #b71c20;
+}
+.header a:nth-of-type(4) img{
+    margin-right: 9px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+.header a:nth-of-type(5){
+    margin-right: 2px;
+}
+.header a:nth-of-type(5) span{  
+    position: absolute;
+    width: 148px;
+    height: 169px;
+    right: 96px;
+    top: 30px;
+    border: 1px solid #e5e5e5;
+    background: url(../../image/common_img/weixin.png) no-repeat;
+    overflow: hidden;
+    display: none;
+    z-index: 10000;
+}
+.header a:nth-of-type(5):hover span{
+    display: inline;
+}
+/* 搜索部分开始 */
+#search-wrapper{
+    height: 90px;
+    background: #ffffff;   
+}
+.search{
+    height: 90px;
+    box-sizing: border-box;
+    background: #ffffff;
+    padding-left: 762px; 
+    display: flex;
+    flex-direction: column; 
+}
+.search .search_top{
+    height: 58px;
+    width: 440px;
+    display: flex;
+    margin-top: 28px;
+    justify-content: space-between;
+}
+.search_top .search_box{
+    display: flex;
+    position: relative;
+}
+.search_box .search_input{
+    height: 23px;
+    width: 256px;
+    padding-left: 4px;
+}
+.search_box .search_input::-webkit-input-placeholder{
+    color: #000000;
+    font-size: 10px;
+}
+.search_box .search_result{
+    display: none;
+    position: absolute;
+    top: 29px;
+    background: #f7f7f7;
+    width: 262px;
+    height: auto;
+    border: 1px solid #000000;
+    z-index: 9999;
+    cursor:pointer;
+}
+.search_box .search_ss{
+    width: 47px;
+    height: 29px;    
+    background: #b81b22;
+    color: #ffffff;
+    cursor:pointer;
+}
+/* 购物车 */
+.search_top .shopping_cart{
+    height: 29px;
+    width: 107px;
+    position: relative;
+}
+
+.shopping_cart .shopping_carttop{
+    height: 29px;
+    width: 107px;
+    border: 1px solid #c1383e;
+    border-bottom: none;
+    cursor:pointer; 
+}
+.shopping_carttop a{
+    display: inline-block;
+    width: 77px;
+    color: #ffffff;
+    height: 29px;
+    line-height: 29px;
+    padding-left: 30px;
+    background: url(../../image/common_img/vanclsprite.png) no-repeat;
+    background-position: -153px 0;
+}
+.shopping_carttop a:hover{
+    color: #b81b22;
+    background: url(../../image/common_img/vanclsprite.png) no-repeat;
+    background-position: -153px -29px;
+}
+ .shopping_cart .shopping_cartbottom{
+    position: absolute;
+    height: auto;
+    width: 300px;
+    border: 1px solid #c1383e;
+    background: #ffffff;
+    overflow: hidden;
+    right: -2px;
+    display: none;
+    z-index: 10000;
+ }
+ .shopping_cart:hover .shopping_cartbottom{
+   display: inline;
+   cursor:pointer;
+}
+.search .search_bottom{
+    height: 32px;
+    width: 44opx;
+   padding-left: 16px;
+}
+
+#navBox{
+    margin: 0 auto;
+    width: 1200px;
+    height: 22px;
+}
+
+.navLogo1{
+    float: left;
+    display: block;
+    width: 185px;
+    height: 46px;
+    background: url(../../image/login_img/logo185.png)
+}
+#navList{
+    margin-left: 20px;
+    margin-top: 24px;
+    float: left;
+    display: flex;
+}
+#navList a{
+    font-size: 16px;
+}
+#navList a:hover{
+    color: #b42025;
+}
+#navList li{
+    width: 99px;
+    height: 32px;
+    text-align: center;
+}
+#navList li span{
+    display: block;
+    position: absolute;
+    top: 152px;
+    height: 16px;
+    width: 1px;
+    border-right: solid 1px #888;
+}
+#navList div{
+    background:white;
+    border-top: 5px solid #b42025;
+    border-bottom: 1px solid rgb(248, 246, 246);
+    position: relative;
+    z-index: 9999;
+    top: 10px;
+    display: none;
+}
+#navList div ul li{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
 
 /* 商品详情 */
 #titleShow_wrap{
@@ -51,7 +282,7 @@
     /* padding: 20px; */
     width: 634px;
     height: 426px;
-    padding-top: 40px;
+    padding-top: 70px;
     float: left;
 }
 .show-image {
@@ -97,7 +328,7 @@
 .show-big-image {
     position: absolute;
     left: 670px;
-    top: 85px;
+    top: 290px;
     width: 440px;
     height: 400px;
     overflow: hidden;
@@ -112,7 +343,7 @@
 }
 .fdj .box_right{
     float: left;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 .top_price i{
     color: #A10000;
