@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+</head>
+<body>
+    <ul>
+        <li></li>
+    </ul>
+    <script src="/js/ajax.js"></script>
+    <script>
+        var shop = (function() {
+            return {
+                init() {
+
+                    this.event();
+                },
+                event() {
+                    var _this = this;
+                },
+                //获取数据
+                getData() {
+                    sendAjax('json/shop_car.js').then(res => {
+                        res = JSON.parse(res);
+                        if(res.code == 0) {
+                            this.insertData(res.data);
+                        }else {
+                            alert("获取信息失败，请查询网络状态");
+                        }                       
+                    });
+                },
+                //渲染数据
+                insertData(data) {
+
+                }
+            }
+        }())
+    </script>
+</body>
+</html>

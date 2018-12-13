@@ -345,7 +345,7 @@
     top: 0;
     width: 1080px;
 }
-.fdj .box_right{
+/* .fdj .box_right{
     float: left;
     margin-top: 70px;
 }
@@ -464,4 +464,50 @@
     height: 52px;
     background: url(../../image/fdj/yh.jpg) no-repeat;
     margin-top: 20px;
+} */
+.fdj .shop_carlist{
+    position: absolute;
+    right: 300px;
+    top: 260px;
+    background: #ffffff;
+    z-index: -1;
+}
+.shop_carlist .tehui{
+    display: block;
+    color: #A10000;
+    font-size: 16px;
+    margin-bottom:50px; 
+}
+.shop_carlist .color_l span:nth-child(1){
+    background: #A10000;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+.shop_carlist .color_l span:nth-child(2){
+    background: yellow;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+.shop_carlist .color_l span:nth-child(3){
+    background: blueviolet;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+.shop_carlist .size span:nth-child(1){
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+}
+.shop_carlist .size span:nth-child(2){
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+}
+.shop_carlist .size span:nth-child(3){
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
 }
