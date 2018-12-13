@@ -31,20 +31,6 @@
                 top: 300px;
                 background: url(image/fdj2_img/asd2.png)
             }
-            .asd2 .buy{
-                display: block;
-                width: 170px;
-                height: 32px;
-                margin-top: 234px;
-                margin-left: 4px;
-            }
-            .asd2 .shop{
-                display: block;
-                width: 170px;
-                height: 32px;
-                margin-top: 234px;
-                margin-left: 12px;
-            }
             .show-image img {
               max-width: 100%;
               max-height: 100%;
@@ -97,6 +83,32 @@
               top: 0;
               width: 1080px;
             }
+            .count{
+                width: 45px;
+                height: 14px;
+                margin-top: 165px;
+                margin-left: 45px;
+                border: none
+            }
+            .jiaru{
+                width: 168px;
+                height: 34px;
+                margin-top: 53px;
+                margin-left: 186px;
+                opacity: 0;
+                cursor:pointer;
+            }
+            .goumai{
+                display: block;
+                width: 168px;
+                height: 34px;
+                background: black;
+                position: absolute;
+                left: 755px;
+                top: 533px;
+                z-index: 10000;
+                opacity: 0;
+            }
           </style>
 </head>
 <body>
@@ -126,13 +138,9 @@
                 <div class="shopping_cart">
                     <div class="shopping_carttop"> 
                         <a href="shop2-2.html">
-                            购物车（<span>0</span>）
+                            购物车（<span class="numspan">0</span>）
                         </a>
-                    </div>
-                    <div class="shopping_cartbottom">
-                        <h2>您的购物车中没有任何商品</h2>
-
-                    </div>                  
+                    </div>               
                 </div>
             </div>
             <div class="search_bottom">
@@ -260,9 +268,9 @@
           <li><img src="image/fdj2_img/xiao5.jpg" alt=""></li>
         </ul>
       </div>
+      <a href="shop2-2.html" class="goumai"></a>
       <div class="asd2">
-          <a href="" class="buy"></a>
-          <a href="" class="shop"></a>
+        <ul class="buyshop"></ul>
         </div>
       <script src="js/login_js/glass.js"></script>
       <script>
@@ -275,7 +283,8 @@
 <script src="js/login_js/ajax0.1.0.js"></script>
     <script>
       var shop = (function() {
-        var $ul = document.querySelector("ul");
+        var $ul = document.querySelector(".buyshop");
+        var $num=document.querySelector(".numspan");
         return {
           init() {
             this.event();
@@ -287,6 +296,7 @@
               e = e || window.event;
               var target = e.target || e.srcElement;
               if (target.nodeName == "BUTTON") {
+                $num.innerHTML++;
                 // 获取当前父级元素li
                 var father = target.parentNode;
                 // 获取商品数量
@@ -295,7 +305,7 @@
                 _this.data[father.index].count = count;
                 _this.setItem(_this.data[father.index]);
               }
-            };
+            }
           },
           getDate() {
             sendAjax("json/shop.json").then(res => {
@@ -313,15 +323,8 @@
               var $li = document.createElement("li");
               $li.index = i;
               $li.innerHTML = `
-                              商品名称：<span class="title">${
-                                data[i].title
-                              }</span></br>
-                              商品价格：<span class="price">${
-                                data[i].price
-                              }</span></br>
-                              商品数量：<input class="count" placeholder="请输入商品数量"/></br>
-                              <span><img src="fdj2_img/${data[i].src}"></span></br>
-                              <button>加入购物车</button>`;
+                              <input class="count"/></br>
+                              <button class="jiaru">加入购物车</button>`;
               $ul.appendChild($li);
             }
           },
