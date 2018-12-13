@@ -9,24 +9,130 @@
     <link rel="stylesheet" href="css/vancl.css">
     <style>
         .asd2{
-            width: 1000px;
-            height: 110px;
-            background: url(image/fdj2_img/asd3.png);
+            width: 1200px;
+            height: 150px;
+            background: url(image/login_img/asd3.png);
             margin: 0 auto;
         }
-        .meiyou{
+        .empty{
             width: 1000px;
             height: 150px;
             line-height: 150px;
             text-align: center;
             font-weight: 600;
-            font-size: 15px
+            font-size: 15px;
+            display: none;
         }
         .xuangou{
             text-decoration: underline;
             font-weight: 600;
             font-size: 15px;
             color: #a00000;
+        }
+        .shopli{
+            margin: 0 auto;
+            width: 1000px;
+            height: 60px;
+            line-height: 60px;
+            display: flex;
+            margin-top: 30px
+        }
+        .shopimg{
+            width: 50px;
+            height: 50px;
+            border: 1px solid rgb(179, 177, 177);
+            margin-left: 100px
+        }
+        .title{
+            margin-left: 50px
+        }
+        .chima{
+            margin-left: 120px
+        }
+        .price{
+            margin-left: 50px
+        }
+        .shuliang1{
+            margin-left: 70px
+        }
+        .xiaoji{
+            margin-left: 110px
+        }
+        .caozuo{
+            margin-left: 60px;
+            color: rgb(151, 148, 148);
+            cursor:pointer;
+        }
+        .jiesuan{
+            margin: 0 auto;
+            width: 995px;
+            height: 125px;
+            background: #fffef5;
+            border:1px solid rgb(209, 205, 205);
+            margin-bottom: 20px
+        }
+        .jine{
+            margin-top: 80px;
+            margin-left: 30px;
+        }
+        .fuhao{
+            font-size: 20px;
+            color: #a00000;
+        }
+        .zongji{
+            font-size: 20px;
+            color: #a00000;
+        }
+        .duomi{
+            display: flex;
+            margin-left: 500px
+        }
+        .duomi1{
+            width: 125px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid #ccc;
+            font-size: 15px;
+            border-radius: 5%;
+            color: rgb(133, 131, 131);
+            background: #e6e6e6;
+            margin-top: -35px;
+            position: absolute;
+            left: 900px;
+            top: 375px;
+        }
+        .duomi3{
+            display: block;
+            width: 125px;
+            height: 40px;
+            background: black;
+            position: absolute;
+            left: 900px;
+            top: 340px;
+            opacity: 0;
+        }
+        .duomi2{
+            position: absolute;
+            width: 165px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 20px;
+            background: #b90808;
+            border-radius: 5%;
+            color: white;
+            left: 1040px;
+            top: 335px;
+        }
+        .duomi4{
+            position: absolute;
+            width: 165px;
+            height: 50px;
+            background: black;
+            left: 1040px;
+            top: 335px;
+            opacity: 0;
         }
     </style>
 </head>
@@ -47,12 +153,21 @@
         </div>
     </div>
     <div class="asd2"></div>
-    <div class="meiyou">您的购物车中没有商品，请你先<a href="vancl.html" class="xuangou">选购商品</a></div>
+    <div class="empty">您的购物车中没有商品，请你先<a href="vancl.html" class="xuangou">选购商品</a></div>
    
     <!-- 购物车 -->
     <div class="shopCar">
         <ul class="shopList">
             <!-- <li></li> -->
+        </ul>
+    </div>
+    <div class="jiesuan">
+        <div class="jine">产品金额总计(不含运费)：<span class="fuhao">￥</span><span class="zongji">0.00</span></div>
+        <ul class="duomi">
+            <li class="duomi1"></li>
+            <li class="duomi2"></li>
+            <a href="vancl.html" class="duomi3"></a>
+            <a href="vancl.html" class="duomi4"></a>
         </ul>
     </div>
     <!-- 尾部 -->
@@ -81,9 +196,13 @@
     <script>
             var shopCar = (function() {
               var $ul = document.querySelector(".shopList");
-              var $emp = document.querySelector(".meiyou");
+              var $zongji = document.querySelector(".zongji");
+              var $duomi1 = document.querySelector(".duomi1");
+              var $duomi2 = document.querySelector(".duomi2");
               return {
                 init() {
+                    $duomi1.innerHTML=`<<继续购物`;
+                    $duomi2.innerHTML=`￥去结算>>`;
                   this.event();
                   this.getDate();
                 },
@@ -93,28 +212,29 @@
                 getDate() {
                   var shopList = localStorage.shopList || "[]";
                   shopList = JSON.parse(shopList);
-                  if(shopList!="[]"){
-                        $emp.style.display="none"
-                    }
                   console.log(shopList);
                   this.insertDate(shopList);
                 },
                 insertDate(data) {
                   data.forEach((item, index) => {
                     var $li = document.createElement("li");
+                    $li.className="shopli";
                     $li.index = index;
                     $li.innerHTML = `
-                                    商品名称：<span class="title">${
+                    <span><img src="image/fdj2_img/${data[index].src}" class="shopimg"></span></br>
+                                    <span class="title">${
                                       data[index].title
                                     }</span>
-                                    单价：<span class="price">${
+                                    <span class="chima">XXL</span>
+                                    <span class="price">￥${
                                       data[index].price
                                     }</span>
-                                    <span><img src="image/fdj2_img/${data[index].src}" style='width:68px;height:68px'></span></br>
-                                    商品数量：<span>${data[index].count}</span>
-                                    产品金额总计(不含运费)：<span>${data[index].price *
-                                      data[index].count}</span></br>
-                                    <button>￥去结算>></button>`;
+                                    <span class="shuliang1">${data[index].count}</span>
+                                    <span class="xiaoji">￥${data[index].price *
+                                      data[index].count}</span>
+                                      <buttom class="caozuo">删除</buttom>`;
+                                      $zongji.innerHTML=`${data[index].price *
+                                      data[index].count}`
                     $ul.appendChild($li);
                   });
                 }
