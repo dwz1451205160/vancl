@@ -170,10 +170,11 @@
    display: inline;
    cursor:pointer;
 }
+
 .search .search_bottom{
     height: 32px;
-    width: 44opx;
-   padding-left: 16px;
+    width: 440px;
+    padding-left: 16px;
 }
 
 #navBox{
@@ -223,12 +224,15 @@
     top: 10px;
     display: none;
 }
+#navList div ul {
+    border: 1px solid #EFEFEF;
+    border-top: none;
+}
 #navList div ul li{
     height: 40px;
     line-height: 40px;
     text-align: center;
 }
-
 
 /* 商品详情 */
 #titleShow_wrap{
