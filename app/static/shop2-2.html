@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车2-2</title>
+    <link rel="stylesheet" href="css/vancl.css">
+    <style>
+        .shopCar{
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header_wrapper">
+        <div class="header content">
+            <p>您好,欢迎光临凡客诚品！</p>
+            <a href="login.html">登录</a>
+            <span>|</span>
+            <a href="register.html">注册</a>
+            <a href="#">我的订单</a>
+            <a href="#"><img src="image/common_img/notice.png" />网站公告</a>
+            <a href="#"><img src="image/common_img/w1.jpg" />
+                <span class="weibomap"></span>
+            </a>
+            <a href="#"><img src="image/common_img/w2.jpg" /></a>
+        </div>
+    </div>
+   
+    <!-- 购物车 -->
+    <div class="shopCar">
+        <ul class="shopList">
+            <!-- <li></li> -->
+        </ul>
+    </div>
+    <!-- 尾部 -->
+    <footer id="footer_wrap">
+        <div class="footer_top content">
+            <p> Copyright 2007 - 2018 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11011502002400号
+                出版物经营许可证新出发京批字第直110138号</p>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="icon88"></i>
+                    </a>
+                </li>
+                <li>
+                    <i class="icon77"></i>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon66"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+            var shopCar = (function() {
+              var $ul = document.querySelector(".shopList");
+              return {
+                init() {
+                  this.event();
+                  this.getDate();
+                },
+                event() {
+                  var _this = this;
+                },
+                getDate() {
+                  var shopList = localStorage.shopList || "[]";
+                  shopList = JSON.parse(shopList);
+                  console.log(shopList);
+                  this.insertDate(shopList);
+                },
+                insertDate(data) {
+                  data.forEach((item, index) => {
+                    var $li = document.createElement("li");
+                    $li.index = index;
+                    $li.innerHTML = `
+                                    商品名称：<span class="title">${
+                                      data[index].title
+                                    }</span></br>
+                                    商品价格：<span class="price">${
+                                      data[index].price
+                                    }</span></br>
+                                    <span><img src="fdj2_img/${data[index].src}" style='width:68px;height:68px'></span></br>
+                                    商品数量：<input class="count" placeholder="请输入商品数量"/></br>
+                                    小计：<span>${data[index].price *
+                                      data[index].count}</span></br>
+                                    <button>加入购物车</button>`;
+                    $ul.appendChild($li);
+                  });
+                }
+              };
+            })();
+            shopCar.init();
+          </script>
+</body>
+
+</html>

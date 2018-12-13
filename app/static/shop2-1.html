@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>购物车1</title>
+    <title>购物车2-1</title>
     <link rel="stylesheet" href="css/vancl.css">
     <style>
             .box {
@@ -272,3 +272,67 @@
 </html>
 <script src="js/login_js/jquery-3.3.1.js"></script>
 <script src="js/login_js/lunbo.js"></script>
+<script src="js/login_js/ajax0.1.0.js"></script>
+    <script>
+      var shop = (function() {
+        var $ul = document.querySelector("ul");
+        return {
+          init() {
+            this.event();
+            this.getDate();
+          },
+          event() {
+            var _this = this;
+            $ul.onclick = function(e) {
+              e = e || window.event;
+              var target = e.target || e.srcElement;
+              if (target.nodeName == "BUTTON") {
+                // 获取当前父级元素li
+                var father = target.parentNode;
+                // 获取商品数量
+                var count = father.querySelector(".count").value;
+                console.log(count);
+                _this.data[father.index].count = count;
+                _this.setItem(_this.data[father.index]);
+              }
+            };
+          },
+          getDate() {
+            sendAjax("json/shop.json").then(res => {
+              res = JSON.parse(res);
+              if (res.code == 0) {
+                this.data = res.data;
+                this.insetDate(res.data);
+              } else {
+                alert("获取信息失败，请查询网络状况");
+              }
+            });
+          },
+          insetDate(data) {
+            for (let i = 0; i < data.length; i++) {
+              var $li = document.createElement("li");
+              $li.index = i;
+              $li.innerHTML = `
+                              商品名称：<span class="title">${
+                                data[i].title
+                              }</span></br>
+                              商品价格：<span class="price">${
+                                data[i].price
+                              }</span></br>
+                              商品数量：<input class="count" placeholder="请输入商品数量"/></br>
+                              <span><img src="fdj2_img/${data[i].src}"></span></br>
+                              <button>加入购物车</button>`;
+              $ul.appendChild($li);
+            }
+          },
+          setItem(data) {
+            var shopList = localStorage.getItem("shopList") || "[]";
+            shopList = JSON.parse(shopList);
+            shopList.push(data);
+            localStorage.shopList = JSON.stringify(shopList);
+            console.log(shopList);
+          }
+        };
+      })();
+      shop.init();
+    </script>
