@@ -345,72 +345,75 @@
     top: 0;
     width: 1080px;
 }
-/* .fdj .box_right{
-    float: left;
+
+ .fdj .shop_carlist{
+    float: right;
     margin-top: 70px;
+    margin-right: 230px;
+    background: #ffffff;
+    z-index: -1;
 }
-.top_price i{
+.shop_carlist .tehui{
+    display: block;
     color: #A10000;
-    font-size: 12px;
+    margin-bottom:30px;
 }
-.top_price span{
+.shop_carlist .tehui i{
+    font-weight: 900;
+    display: inline-block;
     color: #A10000;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
 }
-.top_price strong a{
-    color: #A10000;
-    margin-left: 20px;
+.shop_carlist .color_l{
+    margin-bottom: 25px;
 }
-.getColor{
-    margin-top: 24px;
-    overflow: hidden;
-}
-.getColor span{
-    color: #000;
-    font-size: 12px;
-    float: left;
-}
-.getColor ul{
-    float: left;
-}
-.getColor ul li{
-    width: 94px;
-    height: 36px;
+.shop_carlist .color_l span{
+    display: inline-block;
+    width: 54px;
+    height: 26px;
     border: 1px solid #B4B4B4;
-    float: left;
-    margin: 0 5px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+.shop_carlist .color_l span:hover{
+    border-color: #A10000;
+    cursor: pointer;
+}
+.shop_carlist .color_l span:nth-child(1){
     background: url(../../image/fdj/color01.jpg) no-repeat;
 }
-.getColor ul li:nth-child(2){
+.shop_carlist .color_l span:nth-child(2){
     background: url(../../image/fdj/color02.jpg) no-repeat;
 }
-.getColor ul li:nth-child(3){
+.shop_carlist .color_l span:nth-child(3){
     background: url(../../image/fdj/color03.jpg) no-repeat;
+    
 }
-.getColor ul li a{
-    display: block;
-    width: 94px;
-    height: 36px; 
-    line-height: 36px;  
-    vertical-align: middle;
-    padding-left: 40px;
-}
-.getColor ul li:hover{
-    border-color: #A10000;
-}
-.urse_buy .buy_buy{
+.shop_carlist .size span{
+    width: 25px;
+    height: 25px;
+    border: 1px solid  #B4B4B4;
     display: inline-block;
-    width: 168px;
-    height: 30px;
     text-align: center;
-    line-height: 30px;
-    color: #B71B21;
-    font-size: 14px;
-    background: #F7ABAF;
-    border: 1px solid #B71B21;
+    line-height: 25px;
+    margin-bottom: 25px;
 }
-.urse_buy .buy_car{
+.shop_carlist .size span:hover{
+    border-color: #A10000;
+    cursor: pointer;
+}
+.shop_carlist #count{
+    margin-bottom: 25px;
+}
+.shop_carlist .selected{
+    margin-bottom: 20px; 
+}
+.shop_carlist .selected i{
+    color: #A10000;   
+}
+.shop_carlist button{
+    background: url(../../image/fdj/car.jpg) no-repeat;
     display: inline-block;
     width: 170px;
     height: 32px;
@@ -419,95 +422,14 @@
     font-size: 14px;
     text-align: center;
     background: #B81C22;
-}
-.urse_buy .buy_car i{
     vertical-align: middle;
-    margin-right: 10px;
-}
-.size{
-    width: 335px;
-    height: 32px;
-    margin: 20px 0;
-}
-.size span{
-    color: #000;
-    font-size: 12px;
-    float: left;
-}
-.size ul li{
-    float: left;
-    border: 1px solid #C8C8C8;
-    padding: 6px 10px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-.size ul li:hover{
-    border-color: #A10000;
-}
-.quantity span{
-    color: #000;
-    font-size: 12px;
-}
-.quantity select{
-    width: 50px;
-    margin-bottom: 20px;
-}
-.selected{
-    margin-bottom: 20px;
-}
-.selected span{
-    color: #000;
-    font-size: 12px;
+    border: none;
 }
 .Preferential{
     width: 400px;
     height: 52px;
     background: url(../../image/fdj/yh.jpg) no-repeat;
     margin-top: 20px;
-} */
-.fdj .shop_carlist{
-    position: absolute;
-    right: 300px;
-    top: 260px;
-    background: #ffffff;
-    z-index: -1;
-}
-.shop_carlist .tehui{
-    display: block;
-    color: #A10000;
-    font-size: 16px;
-    margin-bottom:50px; 
-}
-.shop_carlist .color_l span:nth-child(1){
-    background: #A10000;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-}
-.shop_carlist .color_l span:nth-child(2){
-    background: yellow;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-}
-.shop_carlist .color_l span:nth-child(3){
-    background: blueviolet;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-}
-.shop_carlist .size span:nth-child(1){
-    font-size: 20px;
-    width: 50px;
-    height: 50px;
-}
-.shop_carlist .size span:nth-child(2){
-    font-size: 20px;
-    width: 50px;
-    height: 50px;
-}
-.shop_carlist .size span:nth-child(3){
-    font-size: 20px;
-    width: 50px;
-    height: 50px;
-}
+    float: right;
+    margin-right: 166px;
+} 
