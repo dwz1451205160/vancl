@@ -1,5 +1,6 @@
 var shop = (function() {
     var $ul = document.querySelector('.shop_carlist');
+    var $num=document.querySelector(".numspan");
     return {
         init() {
             
@@ -20,7 +21,7 @@ var shop = (function() {
                     //把数量添加到商品信息中
                     _this.data[father.index].count = Number(count);
                     console.log(_this.data[father.index]);
-                    
+                    // $num.innerHTML = _this.data[father.index].count;
                     _this.setItem(_this.data[father.index]);
                     alert('成功加入购物车');
 
@@ -70,8 +71,7 @@ var shop = (function() {
                     </select>
                     <p class='selected'>已选：军绿色 <i>现在有货</i></p>
                     <button>加入购物车</button>
-                    
-
+                    <a href='shop2-2.html' class='go_buy'>立即购买</a>
                 `    
                 $ul.appendChild($li);
             }
@@ -89,6 +89,7 @@ var shop = (function() {
                 if(data.id == shopcarList[i].id) {
                     //此商品已经存在
                     shopcarList[i].count += data.count;
+                    $num.innerHTML = shopcarList[i].count;
                     break;
                 }
 

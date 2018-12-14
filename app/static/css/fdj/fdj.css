@@ -413,7 +413,6 @@
     color: #A10000;   
 }
 .shop_carlist button{
-    background: url(../../image/fdj/car.jpg) no-repeat;
     display: inline-block;
     width: 170px;
     height: 32px;
@@ -422,8 +421,19 @@
     font-size: 14px;
     text-align: center;
     background: #B81C22;
-    vertical-align: middle;
     border: none;
+    cursor: pointer;
+}
+.shop_carlist .go_buy{
+    display: inline-block;
+    width: 100px;
+    height: 32px;
+    background: #B81C22;
+    line-height: 34px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    
 }
 .Preferential{
     width: 400px;
@@ -433,3 +443,4 @@
     float: right;
     margin-right: 166px;
 } 
+
